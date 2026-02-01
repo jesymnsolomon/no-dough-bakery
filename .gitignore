@@ -1,0 +1,7 @@
+# Workflow files
+.vscode
+node_modules
+package-lock.json
+prepros.config
+.DS_Store
+.shopify

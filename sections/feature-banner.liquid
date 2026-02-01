@@ -1,0 +1,352 @@
+<div class="feature-banner-section" 
+     style="background-image: url({{ section.settings.bg_image_desktop | image_url }}); padding-left: {{ section.settings.section_padding_left }}px; padding-right: {{ section.settings.section_padding_right }}px;">
+  
+  <div class="content-container">
+    <!-- Title and Subtitle -->
+    <h2 style="color: {{ section.settings.title_color }}; font-size: {{ section.settings.title_font_size }}px;">
+      {{ section.settings.title }}
+    </h2>
+    <p style="color: {{ section.settings.subtitle_color }}; font-size: {{ section.settings.subtitle_font_size }}px;">
+      {{ section.settings.subtitle }}
+    </p>
+
+    <!-- Responsive Layout -->
+    <div class="blocks-and-image">
+      
+      <!-- Left Feature Blocks -->
+      <div class="feature-blocks left-blocks" style="padding-right: {{ section.settings.feature_padding }}px;">
+        {% for block in section.blocks limit: 3 %}
+          <div class="block-item">
+            <div class="icon-text-row" style="text-align: {{ section.settings.left_feature_text_alignment }};">
+              {% if section.settings.left_icon_position == "left" %}
+                {% if block.settings.icon %}
+                  <img src="{{ block.settings.icon | image_url }}" 
+                       alt="{{ block.settings.item_title }}" 
+                       width="50" 
+                       height="50">
+                {% endif %}
+              {% endif %}
+              <div class="text-content" style="text-align: {{ section.settings.left_feature_text_alignment }};">
+                <h3 style="color: {{ section.settings.item_title_color }}; font-size: {{ section.settings.item_title_font_size }}px;">
+                  {{ block.settings.item_title }}
+                </h3>
+                <p style="color: {{ section.settings.item_subtitle_color }}; font-size: {{ section.settings.item_subtitle_font_size }}px;">
+                  {{ block.settings.item_subtitle }}
+                </p>
+              </div>
+              {% if section.settings.left_icon_position == "right" %}
+                {% if block.settings.icon %}
+                  <img src="{{ block.settings.icon | image_url }}" 
+                       alt="{{ block.settings.item_title }}" 
+                       width="50" 
+                       height="50">
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Center Image -->
+      {% if section.settings.center_image %}
+        <div class="center-image">
+          <img src="{{ section.settings.center_image | image_url }}" 
+               alt="Center Product Image" 
+               width="400" 
+               height="400">
+        </div>
+      {% endif %}
+
+      <!-- Right Feature Blocks -->
+      <div class="feature-blocks right-blocks" style="padding-left: {{ section.settings.feature_padding }}px;">
+        {% for block in section.blocks offset: 3 %}
+          <div class="block-item">
+            <div class="icon-text-row" style="text-align: {{ section.settings.right_feature_text_alignment }};">
+              {% if section.settings.right_icon_position == "left" %}
+                {% if block.settings.icon %}
+                  <img src="{{ block.settings.icon | image_url }}" 
+                       alt="{{ block.settings.item_title }}" 
+                       width="50" 
+                       height="50">
+                {% endif %}
+              {% endif %}
+              <div class="text-content" style="text-align: {{ section.settings.right_feature_text_alignment }};">
+                <h3 style="color: {{ section.settings.item_title_color }}; font-size: {{ section.settings.item_title_font_size }}px;">
+                  {{ block.settings.item_title }}
+                </h3>
+                <p style="color: {{ section.settings.item_subtitle_color }}; font-size: {{ section.settings.item_subtitle_font_size }}px;">
+                  {{ block.settings.item_subtitle }}
+                </p>
+              </div>
+              {% if section.settings.right_icon_position == "right" %}
+                {% if block.settings.icon %}
+                  <img src="{{ block.settings.icon | image_url }}" 
+                       alt="{{ block.settings.item_title }}" 
+                       width="50" 
+                       height="50">
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+.feature-banner-section {
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+}
+
+.content-container {
+  text-align: center;
+}
+
+.blocks-and-image {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block-item {
+  text-align: left;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.icon-text-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-text-row img {
+  flex-shrink: 0;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+  
+@media screen and (max-width: 768px) {
+  .blocks-and-image {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .feature-blocks {
+    width: 100%;
+  }
+  .center-image {
+    margin: 20px auto;
+  }
+  .center-image img {
+    width: 300px;
+    height: 300px;
+  }
+  .icon-text-row {
+    justify-content: center;
+    text-align: center;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Feature Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Feature Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "This is a subtitle with some descriptive text."
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_desktop",
+      "label": "Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image_mobile",
+      "label": "Background Image (Mobile)"
+    },
+    {
+      "type": "image_picker",
+      "id": "center_image",
+      "label": "Center Image"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#c34b4a"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Title Font Size",
+      "min": 10,
+      "max": 50,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_font_size",
+      "label": "Subtitle Font Size",
+      "min": 10,
+      "max": 50,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "item_title_color",
+      "label": "Item Title Color",
+      "default": "#c34b4a"
+    },
+    {
+      "type": "range",
+      "id": "item_title_font_size",
+      "label": "Item Title Font Size",
+      "min": 10,
+      "max": 30,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "item_subtitle_color",
+      "label": "Item Subtitle Color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "item_subtitle_font_size",
+      "label": "Item Subtitle Font Size",
+      "min": 10,
+      "max": 30,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "text",
+      "id": "section_padding_left",
+      "label": "Section Padding Left",
+      "default": "20"
+    },
+    {
+      "type": "text",
+      "id": "section_padding_right",
+      "label": "Section Padding Right",
+      "default": "20"
+    },
+    {
+      "type": "text",
+      "id": "feature_padding",
+      "label": "Feature Block Padding (Left and Right)",
+      "default": "20"
+    },
+    {
+      "type": "select",
+      "id": "left_feature_text_alignment",
+      "label": "Left Feature Text Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "right_feature_text_alignment",
+      "label": "Right Feature Text Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "select",
+      "id": "left_icon_position",
+      "label": "Left Icon Position",
+      "options": [
+        { "value": "left", "label": "Left of Text" },
+        { "value": "right", "label": "Right of Text" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "right_icon_position",
+      "label": "Right Icon Position",
+      "options": [
+        { "value": "left", "label": "Left of Text" },
+        { "value": "right", "label": "Right of Text" }
+      ],
+      "default": "right"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "Icon Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "item_title",
+          "label": "Item Title",
+          "default": "Feature"
+        },
+        {
+          "type": "text",
+          "id": "item_subtitle",
+          "label": "Item Subtitle",
+          "default": "Description of this feature."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Banner",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

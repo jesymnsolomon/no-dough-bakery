@@ -1,0 +1,49 @@
+{
+  "name": "no-dough-bakery",
+  "version": "1.0.0",
+  "description": "A Shopify theme for No Dough Bakery",
+  "main": "gulpfile.js",
+  "scripts": {
+    "styles:theme": "gulp sass",
+    "styles:quickload": "gulp quickload",
+    "styles": "run-s styles:**",
+    "watch:shopify": "shopify theme serve",
+    "watch:gulp": "gulp",
+    "watch": "run-p watch:**",
+    "dev:shopify-3.0": "shopify theme dev --store 8a96bf-2.myshopify.com",
+    "dev:gulp": "gulp",
+    "dev": "run-p dev:**",
+    "build": "npm run styles",
+    "pull": "shopify theme pull -d --nodelete"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesymnsolomon/no-dough-bakery.git"
+  },
+  "keywords": [
+    "shopify",
+    "liquid"
+  ],
+  "author": "Manufactur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesymnsolomon/no-dough-bakery/issues"
+  },
+  "homepage": "https://github.com/jesymnsolomon/no-dough-bakery#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.0.0",
+    "gulp-order": "^1.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.38.1"
+  },
+  "dependencies": {
+    "shopify": "^0.1.0"
+  }
+}
