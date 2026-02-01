@@ -7,24 +7,21 @@ assign section settings to variables
 {%- assign bottom_spacing = section.settings.section_spacing_bottom -%}
 {% assign section_id = section.settings.custom_id | default: section.id %}
 
-{% assign icons = section.blocks | where: "type", "icon" %}
-{% assign small_texts = section.blocks | where: "type", "small_text" %}
-{% assign headings = section.blocks | where: "type", "heading" %}
-{% assign texts = section.blocks | where: "type", "text" %}
-{% assign buttons = section.blocks | where: "type", "button" %}
 {% assign logos = section.blocks | where: "type", "logo" %}
 {% assign enable_marquee = section.settings.enable_marquee %}
 {% assign top_offset = section.settings.top_offset %}
 {% assign animation_duration = section.settings.animation_duration |  append: 's' %}
 
-{% if section.settings.is_compact %}
-  {% assign compact_class = "mfr-core__logo-bar--compact" %}
-{% endif %}
-
 {% if section.settings.color_theme %}
   {% assign text_color = section.settings.color_theme %}
 {% else %}
   {% assign text_color = "" %}
+{% endif %}
+
+{% if section.settings.bg_color %}
+  {% assign bg_color = section.settings.bg_color %}
+{% else %}
+  {% assign bg_color = "" %}
 {% endif %}
 
 {% capture spacer %}
@@ -34,9 +31,9 @@ assign section settings to variables
   --bottom-spacing-desktop: {{ section.settings.bottom_spacing_desktop }}px;
 {% endcapture %}
 
-<section class="logo-bar background {{ compact_class }} {{ section.settings.custom_class }} carousel section {% if section.settings.scrolling_text %}mfr-core__scrolling-text{% endif %}"
+<section class="logo-bar background {{ section.settings.custom_class }} carousel section {% if section.settings.scrolling_text %}mfr-core__scrolling-text{% endif %}"
   id="{{ section_id }}"
-  style="--top-offset: {{ top_offset }}px";>
+  style="--top-offset: {{ top_offset }}px; --bg-color: {{ bg_color }}";>
   <div class="section-spacer" style="{{ spacer }}">
     <div class="grid-container align-center full">
       <div class="grid-x align-center text-center section-spacer__inner {{ text_color }}">
@@ -112,27 +109,6 @@ assign section settings to variables
           "default": 1
         },
       {
-        "type": "header",
-        "content": "Content Settings"
-      },
-      {
-        "type": "checkbox",
-        "id": "is_compact",
-        "label": "Compact?",
-        "info": "Non compact layout don't show texts."
-      },
-      /* {
-        "type": "checkbox",
-        "id": "autoplay",
-        "label": "Autoplay Carousel"
-      },
-      {
-        "type": "checkbox",
-        "id": "scrolling_text",
-        "label": "Convert to scrolling text?"
-      },
-      */
-      {
         "type": "select",
         "id": "color_theme",
         "options": [
@@ -204,46 +180,6 @@ assign section settings to variables
         "label": "Background Color"
       },
       {
-        "type": "image_picker",
-        "id": "bg_image_mobile",
-        "label": "Background Image - Mobile"
-      },
-      {
-        "type": "image_picker",
-        "id": "bg_image",
-        "label": "Background Image - Desktop"
-      },
-      {
-        "type": "header",
-        "content": "Divider Settings"
-      },
-      {
-        "type": "select",
-        "id": "top_divider",
-        "label": "Top Divider",
-        "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
-          {
-            "value": "1",
-            "label": "Divider 1"
-          },
-          {
-            "value": "2",
-            "label": "Divider 2"
-          }
-        ],
-        "default": "none"
-      },
-      {
-        "type": "color",
-        "id": "top_divider_color",
-        "label": "Top Divider Color",
-        "default": "#ffffff"
-      },
-       {
         "type":"header",
         "content":"Offset"
       },

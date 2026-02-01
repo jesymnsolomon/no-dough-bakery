@@ -1,12 +1,17 @@
 .logo-bar {
   top: var(--top-offset);
   z-index: -2;
+  background-color: var(--bg-color);
 
   .section-spacer {
     &__inner {
       overflow: hidden;
       @include border-radius( rem-calc( 15px ) );
     }
+  }
+
+  .cell {
+    background-color: var(--bg-color);
   }
 
   .grid-container.full {
@@ -32,6 +37,16 @@
       }
 
       &:last-child .section-title { margin-bottom: 0; }
+    }
+  }
+
+  .grid-x {
+    &.color_theme__light {
+        color: white;
+    }
+
+    &.color_theme__dark {
+        color: rgb(34, 34, 34);
     }
   }
 
@@ -93,7 +108,7 @@
         p {
           font-weight: 800;
           margin: 0;
-          font-size: rem-calc(20px);
+          font-size: rem-calc(23px);
         }
 
         h1,h2,h3,h4,h5,h6 {

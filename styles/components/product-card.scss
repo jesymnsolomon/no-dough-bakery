@@ -19,7 +19,7 @@
     &__heading {
         h3, a {
             color: rgb(11, 11, 11);
-            font-size: 20px;
+            font-size: rem-calc(35px);
             font-family: var(--font-heading-family);
             letter-spacing: 1px;
             font-weight: 600;

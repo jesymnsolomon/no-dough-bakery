@@ -1,0 +1,45 @@
+.collection-row-section {
+  justify-content: center;
+
+  .collection-row-section {
+    padding-bottom: 80px;
+    height: 100%;
+  }
+  a.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    background: none !important;
+    margin: 10px;
+    overflow: visible;
+    height: 170px;
+
+    .card-image-container {
+      aspect-ratio: 1/1;
+      border-radius: rem-calc(200px);
+      padding: 5px;
+      border: 2px solid white;
+      margin-bottom: 5px;
+    }
+
+    .card-title {
+      position: relative;
+      text-align: center;
+      max-width: none;
+      top: 0;
+      left: 0;
+      font-family: var(--font-heading-family);
+      text-transform: none;
+    }
+
+    &:hover {
+      .card-image-container {
+        border: 2px solid black;
+      }
+      .card-title {
+        color: #da6750;
+      }
+    }
+  }
+}
