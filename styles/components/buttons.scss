@@ -3,10 +3,26 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .button {
-    @include global-button-style;
-    min-height: 40px;
-    min-width: 200px;
+  @include global-button-style;
+  min-height: 40px;
+  min-width: 200px;
+  transition: 0.2s;
+
+  &--primary.button {
+    &:hover {
+      transition: 0.2s;
+      background-color: rgb(var(--color-button-hover));
+
+      &::after,
+      &::before {
+        content: "";
+        box-shadow: none !important;
+      }
+    }
+  }
 }

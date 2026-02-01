@@ -1,0 +1,764 @@
+{%- comment -%}
+--------------------------------------
+assign section settings to variables
+--------------------------------------
+{%- endcomment -%}
+{%- assign top_spacing = section.settings.section_spacing_top -%}
+{%- assign bottom_spacing = section.settings.section_spacing_bottom -%}
+{% assign section_id = section.settings.custom_id | default: section.id %}
+
+{% assign icons = section.blocks | where: "type", "icon" %}
+{% assign small_texts = section.blocks | where: "type", "small_text" %}
+{% assign headings = section.blocks | where: "type", "heading" %}
+{% assign texts = section.blocks | where: "type", "text" %}
+{% assign buttons = section.blocks | where: "type", "button" %}
+{% assign logos = section.blocks | where: "type", "logo" %}
+{% assign enable_marquee = section.settings.enable_marquee %}
+{% assign top_offset = section.settings.top_offset %}
+{% assign animation_duration = section.settings.animation_duration |  append: 's' %}
+
+{% if section.settings.is_compact %}
+  {% assign compact_class = "mfr-core__logo-bar--compact" %}
+{% endif %}
+
+{% if section.settings.color_theme %}
+  {% assign text_color = section.settings.color_theme %}
+{% else %}
+  {% assign text_color = "" %}
+{% endif %}
+
+{% capture spacer %}
+  --top-spacing-mobile: {{ section.settings.top_spacing_mobile }}px;
+  --bottom-spacing-mobile: {{ section.settings.bottom_spacing_mobile }}px;
+  --top-spacing-desktop: {{ section.settings.top_spacing_desktop }}px;
+  --bottom-spacing-desktop: {{ section.settings.bottom_spacing_desktop }}px;
+{% endcapture %}
+
+<section class="logo-bar background {{ compact_class }} {{ section.settings.custom_class }} carousel section {% if section.settings.scrolling_text %}mfr-core__scrolling-text{% endif %}"
+  id="{{ section_id }}"
+  style="--top-offset: {{ top_offset }}px";>
+  <div class="section-spacer" style="{{ spacer }}">
+    <div class="grid-container align-center full">
+      <div class="grid-x align-center text-center section-spacer__inner {{ text_color }}">
+        {% if logos != blank %}
+          <div class="cell small-12 logo-bar__container {% if enable_marquee %}marquee{% else %}carousel__slides{% endif %}">
+            <div class="marquee-scroller__group logo-bar {% if enable_marquee %}marquee{% else %}carousel__slides{% endif %}"
+              style="--animation-duration: {{ animation_duration }}">
+              <div class="logo-bar__marquee-helper">
+                <div class="logo-bar__marquee-inner">
+                  {%- for count in ( 1..section.settings.duplicates ) -%}
+                    {%- for block in logos -%}
+                          {% if block.settings.button_link != blank %}
+                            {% assign element_tag = "a" %}
+                            {% assign href_attribute = "href='" | append: block.settings.button_link | append: "'" %}
+                          {% else %}
+                            {% assign element_tag = "div" %}
+                            {% assign href_attribute = "" %}
+                          {% endif %}
+                          <{{ element_tag }} {{ href_attribute }} class="logo carousel__item marquee-scroller__item">
+                            {%- if block.settings.svg_code != blank or block.settings.image -%}
+                              {%- if block.settings.svg_code != blank -%}
+                                {% assign encoded_svg = block.settings.svg_code | replace: '<', '%3C' | replace: '>', '%3E' | replace: '#', '%23' | urlencode %}
+                                {% assign encoded_svg = 'data:image/svg+xml,' | append: encoded_svg %}
+                                <img src='{{ encoded_svg }}' alt="svg logos sliding from side to side">
+                              {%- else -%}
+                                <img
+                                  src="{{ block.settings.image | img_url: "200x", scale: 2 }}"
+                                  alt="{{ block.settings.title | default: block.settings.image.alt }}"
+                                  class="image"
+                                  width="{{ block.settings.image.width }}"
+                                  height="{{ block.settings.image.height }}"
+                                  loading="lazy">
+                              {%- endif -%}
+                              {% if block.settings.text %}
+                                <div class="logo-text">{{ block.settings.text }}</div>
+                              {% endif %}
+                            {%- endif -%}
+                          </{{ element_tag }}>
+                    {%- endfor -%}
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+  {
+    "name": "Logo Bar",
+    "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_marquee",
+          "label": "Enabled Marquee"
+        },
+        {
+          "type": "number",
+          "id": "animation_duration",
+          "label": "Animation Duration",
+          "info": "Duration of marquee animation to complete (in seconds)",
+          "default": 5
+        },
+        {
+          "type": "number",
+          "id": "duplicates",
+          "label": "# of Duplicate",
+          "info": "If you see white space after the marquee slides, increase this option.",
+          "default": 1
+        },
+      {
+        "type": "header",
+        "content": "Content Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "is_compact",
+        "label": "Compact?",
+        "info": "Non compact layout don't show texts."
+      },
+      /* {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay Carousel"
+      },
+      {
+        "type": "checkbox",
+        "id": "scrolling_text",
+        "label": "Convert to scrolling text?"
+      },
+      */
+      {
+        "type": "select",
+        "id": "color_theme",
+        "options": [
+            { "value": "color_theme__dark", "label": "Dark Text" },
+            { "value": "color_theme__light", "label": "Light Text" },
+            { "value": "color_theme__custom", "label": "Custom Theme Text" }
+            ],
+        "label": "Color Theme",
+        "default": "color_theme__dark"
+      },
+
+      {
+        "type": "header",
+        "content": "Mobile Section Spacing"
+      },
+      {
+        "type": "range",
+        "id": "top_spacing_mobile",
+        "min": 0,
+        "max": 300,
+        "step": 5,
+        "unit": "px",
+        "label": "Top Spacing",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "bottom_spacing_mobile",
+        "min": 0,
+        "max": 300,
+        "step": 5,
+        "unit": "px",
+        "label": "Bottom Spacing",
+        "default": 0
+      },
+
+      {
+        "type": "header",
+        "content": "Desktop Section Spacing"
+      },
+      {
+        "type": "range",
+        "id": "top_spacing_desktop",
+        "min": 0,
+        "max": 300,
+        "step": 5,
+        "unit": "px",
+        "label": "Top Spacing",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "bottom_spacing_desktop",
+        "min": 0,
+        "max": 300,
+        "step": 5,
+        "unit": "px",
+        "label": "Bottom Spacing",
+        "default": 0
+      },
+
+      {
+        "type":"header",
+        "content":"Background"
+      },
+      {
+        "type": "color_background",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image_mobile",
+        "label": "Background Image - Mobile"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Background Image - Desktop"
+      },
+      {
+        "type": "header",
+        "content": "Divider Settings"
+      },
+      {
+        "type": "select",
+        "id": "top_divider",
+        "label": "Top Divider",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "1",
+            "label": "Divider 1"
+          },
+          {
+            "value": "2",
+            "label": "Divider 2"
+          }
+        ],
+        "default": "none"
+      },
+      {
+        "type": "color",
+        "id": "top_divider_color",
+        "label": "Top Divider Color",
+        "default": "#ffffff"
+      },
+       {
+        "type":"header",
+        "content":"Offset"
+      },
+      {
+        "type": "number",
+        "id": "top_offset",
+        "label": "Top Offset"
+      },
+      {
+        "type":"header",
+        "content":"Attribute Settings"
+      },
+      {
+        "type": "text",
+        "id": "custom_class",
+        "label": "Custom class"
+      },
+      {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom ID"
+      }
+    ],
+
+    "blocks": [
+      {
+        "type": "icon",
+        "name": "Icon",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "range",
+            "id": "icon_width",
+            "min": 40,
+            "max": 400,
+            "step": 10,
+            "unit": "px",
+            "label": "Image width",
+            "default": 150
+          }
+        ]
+      },
+      {
+        "type":"small_text",
+        "name":"Small Text",
+        "limit":1,
+        "settings":[
+          {
+            "type":"text",
+            "id":"text",
+            "default":"Section Title",
+            "label":"Text"
+          },
+          {
+            "type": "color",
+            "id": "small_text_color",
+            "label": "Color"
+          }
+        ]
+      },
+
+      {
+        "type": "heading",
+        "name": "Heading",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "heading",
+            "default": "<p>Heading H1</p>",
+            "label": "Heading H1"
+          },
+          {
+            "type": "text",
+            "id": "small_text",
+            "label": "Small Text"
+          },
+          {
+            "type": "select",
+            "id": "header_style",
+            "options": [
+                { "value": "h1", "label": "H1"},
+                { "value": "h2", "label": "H2"},
+                { "value": "h3", "label": "H3"},
+                { "value": "h4", "label": "H4"}
+                ],
+            "label": "Header Style",
+            "default": "h1"
+          },
+
+          {
+            "type": "header",
+            "content": "Bold Settings",
+            "info": "Adding bold color or bold underline color will remove the boldness of the text"
+          },
+          {
+              "type": "color",
+              "id": "bold_color",
+              "label": "Bold Color"
+          },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "info": "Use [underline][/underline] to underline text(s)"
+        },
+
+          {
+            "type": "header",
+            "content": "Width Settings"
+          },
+          {
+              "type": "range",
+              "id": "max_width",
+              "min": 0,
+              "max": 50,
+              "step": 1,
+              "unit": "rem",
+              "label": "Max Width",
+              "default": 0
+          },{
+            "type": "header",
+            "content": "Accent Graphic Settings"
+          },
+          {
+            "type": "select",
+            "id": "accent_graphic",
+            "label": "Accent Graphic",
+            "options": [
+              {
+                "value": "",
+                "label": "None"
+              },
+              {
+                "value": "bubbles",
+                "label": "Bubbles"
+              },
+              {
+                "value": "leaves",
+                "label": "Leaves"
+              }
+            ],
+            "default": ""
+          },
+          {
+            "type": "select",
+            "id": "accent_graphic_position_mobile",
+            "label": "Accent Graphic Position - Mobile",
+            "options": [
+              {
+                "value": "none",
+                "label": "None"
+              },
+              {
+                "value": "top-left",
+                "label": "Top Left"
+              },
+              {
+                "value": "top-right",
+                "label": "Top Right"
+              },
+              {
+                "value": "bottom-left",
+                "label": "Bottom Left"
+              },
+              {
+                "value": "bottom-right",
+                "label": "Bottom Right"
+              }
+            ],
+            "default": "none"
+          },
+          {
+            "type": "select",
+            "id": "accent_graphic_position",
+            "label": "Accent Graphic Position",
+            "options": [
+              {
+                "value": "none",
+                "label": "None"
+              },
+              {
+                "value": "top-left",
+                "label": "Top Left"
+              },
+              {
+                "value": "top-right",
+                "label": "Top Right"
+              },
+              {
+                "value": "bottom-left",
+                "label": "Bottom Left"
+              },
+              {
+                "value": "bottom-right",
+                "label": "Bottom Right"
+              }
+            ],
+            "default": "none"
+          },
+          {
+            "type": "color",
+            "id": "accent_graphic_color",
+            "label": "Accent Graphic Color"
+          }
+        ]
+      },
+
+      {
+        "type": "text",
+        "name": "Text",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel metus auctor.</p>",
+            "label": "Text"
+          },
+          {
+            "type":"select",
+            "id":"text_style",
+            "options":[
+              { "value": "", "label":"Default"},
+              { "value":"xsmall", "label":"xSmall" },
+              { "value":"small", "label":"Small" },
+              { "value":"medium", "label":"Medium" },
+              { "value":"large", "label":"Large" },
+              { "value":"xlarge", "label":"xLarge" }
+            ],
+            "label":"Text Style",
+            "default":""
+          },
+          {
+            "type": "select",
+            "id": "font_family",
+            "options": [
+              { "value": "", "label": "Use system settings" },
+              { "value": "custom-font-name-1", "label": "Custom Font Name 1" },
+              { "value": "custom-font-name-2", "label": "Custom Font Name 2" },
+              { "value": "custom-font-name-3", "label": "Custom Font Name 3" },
+              { "value": "custom-font-name-4", "label": "Custom Font Name 4" }
+            ],
+            "label": "Font Family",
+            "default": "",
+            "info": "Custom font names can be via Theme Settings > Custom Fonts"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "label": "Text Color",
+            "info": "Leave it blank to use system settings."
+          },
+          {
+            "type": "color",
+            "id": "bold_color",
+            "label": "Bold Color",
+            "info": "Adding bold color will make the bolded text colored instead of being bold."
+          },
+        {
+            "type": "color",
+            "id": "underline_color",
+            "label": "Underline Color",
+            "info": "Use [underline][/underline] to underline text(s)"
+        },
+
+          {
+            "type": "header",
+            "content": "Width Settings"
+          },
+          {
+              "type": "range",
+              "id": "max_width",
+              "min": 0,
+              "max": 50,
+              "step": 1,
+              "unit": "rem",
+              "label": "Max Width",
+              "default": 0
+          }
+        ]
+      },
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Logo"
+          },
+          {
+            "type":"html",
+            "id":"svg_code",
+            "label":"SVG Code",
+            "info":"(Optional) This will replace the uploaded image if available."
+          },
+          /*
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          */
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }
+        ]
+      },
+      {
+        "type": "accent_graphic",
+        "name": "Accent Graphic",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type":"html",
+            "id":"svg_code",
+            "label":"Graphic SVG Code",
+            "info":"Paste SVG code for vector graphic"
+          },
+          {
+            "type":"header",
+            "content":"Visibility"
+          },
+          {
+            "type": "select",
+            "id": "visibility",
+            "options": [
+                { "value": "always", "label": "Always" },
+                { "value": "desktop_only", "label": "Desktop Only" },
+                { "value": "mobile_only", "label": "Mobile Only" }
+                ],
+            "label": "Show on..",
+            "default": "always"
+          },
+          {
+            "type":"header",
+            "content":"Position"
+          },
+          {
+            "type": "select",
+            "id": "x_setting",
+            "options": [
+                { "value": "left", "label": "Left" },
+                { "value": "right", "label": "Right" }
+                ],
+            "label": "X Position",
+            "default": "left"
+          },
+          {
+            "type": "select",
+            "id": "y_setting",
+            "options": [
+                { "value": "top", "label": "Top" },
+                { "value": "bottom", "label": "Bottom" }
+                ],
+            "label": "Y Position",
+            "default": "top"
+          },
+          {
+            "type":"header",
+            "content":"Large Screen Settings"
+          },
+          {
+            "type": "range",
+            "id": "width_large",
+            "min": 10,
+            "max": 400,
+            "step": 10,
+            "unit": "px",
+            "label": "Graphic Width",
+            "default": 150
+          },
+          {
+            "type": "range",
+            "id": "position_x_large",
+            "min": -100,
+            "max": 100,
+            "step": 2,
+            "unit": "%",
+            "label": "X Position",
+            "default": 10
+          },
+          {
+            "type": "range",
+            "id": "position_y_large",
+            "min": -100,
+            "max": 100,
+            "step": 2,
+            "unit": "%",
+            "label": "Y Position",
+            "default": 10
+          },
+          {
+            "type":"header",
+            "content":"Small Screen Settings"
+          },
+          {
+            "type": "range",
+            "id": "width_small",
+            "min": 10,
+            "max": 400,
+            "step": 10,
+            "unit": "px",
+            "label": "Graphic Width",
+            "default": 150
+          },
+          {
+            "type": "range",
+            "id": "position_x_small",
+            "min": -100,
+            "max": 100,
+            "step": 2,
+            "unit": "%",
+            "label": "X Position",
+            "default": 10
+          },
+          {
+            "type": "range",
+            "id": "position_y_small",
+            "min": -100,
+            "max": 100,
+            "step": 2,
+            "unit": "%",
+            "label": "Y Position",
+            "default": 10
+          },
+          {
+            "type":"header",
+            "content":"Animation Settings"
+          },
+          {
+            "type": "select",
+            "id": "animation",
+            "options": [
+                { "value": "none", "label": "None" },
+                { "value": "rotating", "label": "Rotate" },
+                { "value": "floating", "label": "Float" },
+                { "value": "spark", "label": "Spark" }
+              ],
+            "label": "Animation",
+            "default": "none"
+          },
+
+          {
+            "type":"header",
+            "content":"Appearance Settings"
+          },
+          {
+            "type": "range",
+            "id": "rotate",
+            "min": 0,
+            "max": 360,
+            "step": 36,
+            "unit": "%",
+            "label": "Rotate",
+            "default": 0
+          },
+          {
+            "type": "checkbox",
+            "id": "flip",
+            "label": "Flip Graphics?",
+            "default": false
+          },
+          {
+            "type": "select",
+            "id": "layer",
+            "label": "Parallax Layer",
+            "options": [
+              {
+                "value": "",
+                "label": "No Parallax"
+              },
+              {
+                "value": "1",
+                "label": "First Layer"
+              },
+              {
+                "value": "2",
+                "label": "Second Layer"
+              }
+            ],
+            "default": ""
+          }
+        ]
+      }
+    ],
+
+    "presets": [
+      {
+        "name": "Logo Bar",
+        "category": "Manufactur Core Sections",
+        "blocks": [
+          { "type": "logo" },
+          { "type": "logo" },
+          { "type": "logo" },
+          { "type": "logo" }
+        ]
+      }
+    ]
+  }
+{% endschema %}

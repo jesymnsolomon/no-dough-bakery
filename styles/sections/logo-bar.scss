@@ -1,0 +1,288 @@
+.logo-bar {
+  top: var(--top-offset);
+  z-index: -2;
+
+  .section-spacer {
+    &__inner {
+      overflow: hidden;
+      @include border-radius( rem-calc( 15px ) );
+    }
+  }
+
+  .grid-container.full {
+    .cell.small-12 {
+      padding: 0;
+    }
+  }
+
+  .section-content {
+    margin: 0 0 rem-calc( 36px );
+
+    @include breakpoint( large up ) {
+      margin: 0 0 rem-calc( 20px );
+    }
+
+    .tw {
+      .section-title {
+        margin-bottom: rem-calc( 30px );
+
+        @include breakpoint( large up ) {
+          margin-bottom: rem-calc( 35px );
+        }
+      }
+
+      &:last-child .section-title { margin-bottom: 0; }
+    }
+  }
+
+  .marquee-scroller__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    animation: left-to-right-marquee var(--animation-duration) linear infinite;
+    will-change: transform;
+  }
+
+  .logo-bar {
+    &:not(.marquee, .flickity-enabled) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    &__container {
+      padding: rem-calc( 20px ) 0;
+    }
+
+    .logo {
+      flex-shrink: 0;
+      height: rem-calc( 60px );
+      margin: 0 rem-calc( 24px );
+      min-width: rem-calc( 90px );
+      display: flex;
+      padding: 0 rem-calc(10px);
+      justify-content: center;
+      overflow: visible;
+
+      @include breakpoint( large up ) {
+        height: rem-calc( 60px );
+        adding: 0 rem-calc(30px);
+      }
+
+      img {
+        height: 100%;
+        width: unset;
+        display: block;
+        object-fit: contain;
+        @include transition( $global-transition );
+      }
+
+      &-text {
+        line-height: 1em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        text-align: left;
+        margin-left: rem-calc(20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include transition( $global-transition );
+
+        p {
+          font-weight: 800;
+          margin: 0;
+          font-size: rem-calc(20px);
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+          margin: 0;
+          margin-top: rem-calc(3px);
+          font-size: rem-calc(21px);
+          line-height: rem-calc(20px);
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  &--compact {
+    .logo-bar {
+      &:not(.flickity-enabled) {
+        justify-content: center;
+      }
+      &__container {
+        padding: 0;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: rem-calc( 130px );
+        margin: 0 rem-calc( 15px );
+        height: unset;
+        flex-direction: column;
+        text-align: center;
+        @include breakpoint( large up ) {
+          margin: 0 rem-calc( 35px );
+        }
+
+        img {
+          width: rem-calc( 35px );
+          display: block;
+          margin-bottom: rem-calc( 7px );
+
+          @include breakpoint( large up ) {
+            width: rem-calc( 40px );
+            margin-bottom: rem-calc( 11px );
+          }
+        }
+      }
+    }
+  }
+
+  &.bordered {
+    @include breakpoint(large up) {
+      overflow: hidden;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+  }
+}
+
+@keyframes left-to-right-marquee {
+  0% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.logo-bar {
+    $animation-duration: var(--animation-duration);
+    $bar-bg-color: var(--bar-bg-color);
+    $control-bg-color: var(--control_bg_color);
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    overflow: hidden;
+    margin-left: -10%;
+    width: 120%;
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+
+      @include breakpoint(large up) {
+        padding-left: rem-calc(25.5px);
+        padding-right: rem-calc(25.5px);
+      }
+      @include breakpoint(xlarge up) {
+        padding-left: rem-calc(93px);
+        padding-right: rem-calc(93px);
+      }
+    }
+
+    &__marquee {
+      overflow: hidden;
+      display: inline-block;
+      white-space: nowrap;
+      background: $bar-bg-color;
+      @include opacity(0.9999999);
+
+      &-helper {
+        height: rem-calc(77px);
+        display: block;
+        white-space: nowrap;
+
+        @include breakpoint(large up) {
+          height: rem-calc(100px);
+        }
+      }
+
+      &-inner {
+        display: inline-flex;
+        align-items: center;
+        width: max-content;
+        flex-shrink: 0;
+        white-space: nowrap;
+        height: 100%;
+        max-width: 100%;
+      }
+
+      &-entry {
+        height: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        animation: scroll $animation-duration ease-in-out;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+        @keyframes scroll {
+          0% {
+            @include transform(translateX(0));
+          }
+
+          100% {
+            @include transform(translateX(-20%));
+          }
+        }
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: rem-calc(13px) 0;
+
+        &:nth-of-type(odd) {
+          img {
+            transform: rotate(-20deg);
+          }
+        }
+
+        &:nth-of-type(even) {
+          img {
+            transform: rotate(20deg);
+          }
+        }
+      }
+
+      &-image {
+        height: 100%;
+        margin: 0 rem-calc(20px);
+        margin: 0 rem-calc(15px);
+
+        @include breakpoint(large up) {
+          margin: 0 rem-calc(50px);
+        }
+
+        img {
+          height: 100%;
+          width: auto;
+          display: block;
+          margin: 0;
+          object-fit: contain;
+        }
+      }
+
+      &-text {
+        text-transform: uppercase;
+        font-family: $custom-font-name-3;
+        font-size: rem-calc( 40px );
+        letter-spacing: rem-calc( 1px );
+        margin: 0 rem-calc(15px);
+
+        @include breakpoint(large up) {
+          margin: 0 rem-calc(50px);
+          font-size: rem-calc( 70px );
+        }
+      }
+
+    }
+  }

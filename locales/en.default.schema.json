@@ -130,6 +130,9 @@
         "button_label": {
           "label": "Solid button label"
         },
+        "button_background_hover": {
+          "label": "Solid button background on hover"
+        },
         "secondary_button_label": {
           "label": "Outline button"
         },

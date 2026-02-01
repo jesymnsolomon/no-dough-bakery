@@ -88,7 +88,11 @@
   }
 {%- endstyle -%}
 
-<div id="Banner-{{ section.id }}" class="banner section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+{%-liquid
+  assign banner_height = section.settings.banner_height
+%}
+
+<div id="Banner-{{ section.id }}" class="banner section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient  {{ banner_height }}-size">
 
   <!-- Desktop Only Content -->
   <div class="desktop-only banner__media">
@@ -104,7 +108,7 @@
                  {{ section.settings.desktop_image | image_url: width: 3840 }} 3840w"
          sizes="100vw"
          alt="Desktop Hero Image"
-         style="width: 100%; height: auto;" />
+         style="width: 100%;" />
     <div class="banner__content">
       <h2 class="banner__heading">{{ section.settings.heading }}</h2>
       <div class="banner__text--primary rte">{{ section.settings.primary_text }}</div>
