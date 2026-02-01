@@ -1,1 +1,611 @@
-{"sections":{"responsive_banner":{"type":"responsive-banner","custom_css":["@media only screen and (min-width: 768px) {.banner__content {margin-top: -150px; } .button {min-height: 25px !important; height: 25px !important; font-size: 16px; }}","@media only screen and (max-width: 767px) {.banner__content {margin-top: -50px; } .button {min-height: 20px !important; height: 20px !important; font-size: 12px; }.button {outline: none !important; box-shadow: none !important; border: none;}.button:focus,.button:active {outline: none !important; box-shadow: none !important;}"],"settings":{"desktop_image":"shopify:\/\/shop_images\/hero-desktop.jpg","mobile_image":"shopify:\/\/shop_images\/hero-mobile.jpg","heading":"Healthy Treats","heading_color":"#da6750","heading_font_size_desktop":80,"heading_line_height_desktop":80,"heading_margin_bottom_desktop":25,"heading_font_size_mobile":50,"heading_line_height_mobile":50,"heading_margin_bottom_mobile":10,"primary_text":"<p><strong>Happy Eats<\/strong><\/p>","primary_text_color":"#da6750","primary_text_font_size_desktop":32,"primary_text_line_height_desktop":30,"primary_text_margin_bottom_desktop":35,"primary_text_font_size_mobile":18,"primary_text_line_height_mobile":18,"primary_text_margin_bottom_mobile":25,"secondary_text":"<p>Whole Food Based, Nutrient Dense Products<\/p>","secondary_text_color":"#da6750","secondary_text_font_size_desktop":20,"secondary_text_line_height_desktop":26,"secondary_text_margin_bottom_desktop":25,"secondary_text_font_size_mobile":14,"secondary_text_line_height_mobile":14,"secondary_text_margin_bottom_mobile":10,"button_text":"Shop Now","button_link":"shopify:\/\/collections\/all","button_background_color":"#da6750","button_text_color":"#ffffff","image_overlay_opacity":0,"color_scheme":"background-1","padding_top":0,"padding_bottom":0}},"174785452395c06e9c":{"type":"apps","blocks":{"simple_marquee_marquee_wxXMcQ":{"type":"shopify:\/\/apps\/simple-marquee\/blocks\/marquee\/1c87af44-fdf4-422c-b308-97ab9586a4c4","settings":{"text":"Your message here","color_scheme":"background-1","height":40,"style":"body","size":"medium","duration":20,"gap":20,"stop_on_hover":true}}},"block_order":["simple_marquee_marquee_wxXMcQ"],"settings":{"include_margins":true}},"collection_row_xPNEac":{"type":"collection-row","blocks":{"card_E6Lwjb":{"type":"card","settings":{"background_color":"#f9f9f9","main_image":"shopify:\/\/shop_images\/Home_Page_Cat_3.webp","title":"Nut Butters","link_url":"shopify:\/\/collections\/nut-butter"}},"card_rpfceE":{"type":"card","settings":{"background_color":"#f9f9f9","main_image":"shopify:\/\/shop_images\/Home_Cat_Loaf.webp","title":"Brownies & Bites","link_url":"shopify:\/\/collections\/brownies"}},"card_mUK6Wc":{"type":"card","settings":{"background_color":"#f9f9f9","main_image":"shopify:\/\/shop_images\/Home_Page_Cat_Biscuits.webp","title":"Biscuits & Granola","link_url":"shopify:\/\/collections\/granola"}},"card_WwzAJY":{"type":"card","settings":{"background_color":"#f9f9f9","main_image":"shopify:\/\/shop_images\/Home_Page_Cat_Tort.webp","title":"Tortillas","link_url":"shopify:\/\/collections\/tortillas"}},"card_LVRLUh":{"type":"card","settings":{"background_color":"#f9f9f9","main_image":"shopify:\/\/shop_images\/Home_Cat_every_day.webp","title":"Cakes & Cupcakes","link_url":"shopify:\/\/collections\/cakes-cupcakes"}}},"block_order":["card_E6Lwjb","card_rpfceE","card_mUK6Wc","card_WwzAJY","card_LVRLUh"],"custom_css":[],"settings":{"background_color":"#ffffff","padding_top":0,"padding_bottom":0,"title_font_size":20,"title_padding_top":20,"title_padding_left":20,"card_height":400}},"featured_collection_RgwVgi":{"type":"featured-collection","custom_css":[".card {border-radius: 15px; overflow: hidden; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); background: #f3d8d1; padding: 12px; transition: 0.3s;}",".card:hover {transform: scale(1.03);}",".card__media img {border-radius: 10px; object-fit: cover; width: 100%;}",".card__heading {font-family: \"Poppins\" !important; text-transform: uppercase; font-weight: 500; text-align: center; font-size: 1.6rem;}",".price {text-align: center; color: #da6750;}",".title,.collection__description {text-align: center;}",".title {color: #da6750; margin-bottom: 0.4em; font-size: 35px;}"],"settings":{"title":"Eat Cake. Be Happy.","heading_size":"h2","description":"<p>Perfect of any celebration or just because.<\/p>","show_description":false,"description_style":"uppercase","collection":"cakes-cupcakes","products_to_show":25,"columns_desktop":4,"full_width":true,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"portrait","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":56}},"featured_collection":{"type":"featured-collection","custom_css":[".card {border-radius: 20px; overflow: hidden; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); background: #f3d8d1; padding: 15px; transition: 0.3s;}",".card:hover {transform: scale(1.03);}",".card__media img {border-radius: 20px; object-fit: cover; width: 100%;}",".card__heading {font-family: Poppins !important; text-transform: uppercase; font-weight: 500; text-align: center; font-size: 1.6rem;}",".price,.title,.collection__description {text-align: center;}",".price,.title {color: #da6750;}",".title {margin-bottom: 0; font-size: 50px;}"],"settings":{"title":"Spread the Love","heading_size":"h0","description":"<p>spread, dip or enjoy by the spoonful<\/p>","show_description":false,"description_style":"uppercase","collection":"nut-butter","products_to_show":25,"columns_desktop":4,"full_width":true,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"portrait","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":20,"padding_bottom":0}},"featured_collection_6L8fKJ":{"type":"featured-collection","custom_css":[".card {border-radius: 15px; overflow: hidden; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); background: #f3d8d1; padding: 10px; transition: 0.3s;}",".card:hover {transform: scale(1.03);}",".card__heading {font-family: \"Poppins\" !important; text-transform: uppercase; font-weight: 500; text-align: center; font-size: 1.6rem;}",".price {text-align: center; color: #da6750;}",".title,.collection__description {text-align: center;}",".title {margin-top: 2em; margin-bottom: 1em; color: #da6750; font-size: 50px;}"],"settings":{"title":"Shop Now","heading_size":"h0","description":"","show_description":false,"description_style":"uppercase","collection":"brownies","products_to_show":25,"columns_desktop":4,"full_width":true,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":true,"color_scheme":"background-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"1","swipe_on_mobile":false,"padding_top":0,"padding_bottom":36}},"feature_banner_section":{"type":"feature-banner","blocks":{"block_wL64V8":{"type":"block","settings":{"icon":"shopify:\/\/shop_images\/vegan.svg","item_title":"No Artificial or Zero-Calorie Sweeteners","item_subtitle":"These disrupt your gut lining and hunger signals. Instead, our treats are balanced with healthy fats and carbs to keep you full, nourished, and satisfied all day lon."}},"block_CDanGH":{"type":"block","settings":{"icon":"shopify:\/\/shop_images\/balanced-macros.svg","item_title":"No Refined Oils","item_subtitle":"We only use unrefined virgin coconut oil, avocado oil, or olive oil—clean and nourishing, just like the rest of our ingredients."}},"block_J9NV7H":{"type":"block","settings":{"icon":"shopify:\/\/shop_images\/gluten-free.svg","item_title":"Gut-Friendly & Gluten-Free","item_subtitle":"No processed GF flours that are tough to digest. We use sprouted oats, sprouted nut flours, and easily digestible millets, making our products gentle on your gut."}},"block_D6zVEe":{"type":"block","settings":{"icon":"shopify:\/\/shop_images\/paleo.svg","item_title":"Made from Scratch","item_subtitle":"From grinding our own oat flour to making our own chocolate, we take pride in doing everything ourselves for the highest quality."}},"block_hJPgRi":{"type":"block","settings":{"icon":"shopify:\/\/shop_images\/no-sugar.svg","item_title":"Refined Sugar-Free & Nutritionally Balanced","item_subtitle":"No sugar bombs or energy crashes here. Our treats are designed to support steady blood sugar levels, keeping your insulin response healthy and your energy stable."}}},"block_order":["block_wL64V8","block_CDanGH","block_J9NV7H","block_D6zVEe","block_hJPgRi"],"custom_css":[".feature-banner-section {margin-left: -50px !important; margin-right: -50px !important; width: calc(100% + 100px) !important; margin-top: -50px !important;}",".feature-banner-section .content-container > p {text-transform: uppercase; font-weight: 600; margin-top: -20px;}",".feature-blocks h3 {font-family: \"Poppins\" !important; margin-bottom: 0;}",".center-image {min-width: 350px;}","@media (min-width: 768px) {.right-blocks, .left-blocks {max-width: 30%; }}"],"settings":{"title":"Bye Bye Cheat Days","subtitle":"Made with real whole food ingredients that your body will love","bg_image_desktop":"shopify:\/\/shop_images\/section3-bg-updated_d4848119-31a5-4236-95de-9782c0507ef7.jpg","center_image":"shopify:\/\/shop_images\/section3-products.png","title_color":"#da6750","title_font_size":50,"subtitle_color":"#000000","subtitle_font_size":18,"item_title_color":"#da6750","item_title_font_size":25,"item_subtitle_color":"#666666","item_subtitle_font_size":14,"section_padding_left":"","section_padding_right":"","feature_padding":"","left_feature_text_alignment":"left","right_feature_text_alignment":"right","left_icon_position":"left","right_icon_position":"right"}},"rich_text_bMCYGX":{"type":"rich-text","blocks":{"heading_CtxKQE":{"type":"heading","settings":{"heading":"Join our community","heading_size":"h0"}},"text_FKJGkU":{"type":"text","settings":{"text":"<p><strong>Follow us on instagram :)<\/strong><\/p>"}}},"block_order":["heading_CtxKQE","text_FKJGkU"],"custom_css":["h2 {color: #da6750;}"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":32,"padding_bottom":32}},"17330879272e0e83f6":{"type":"apps","blocks":{"instafeed_app_block_bahgQY":{"type":"shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5","settings":{"title":"","title_color":"","title_size_v2":0,"alignment":"center","instafeed_margin_top":0,"instafeed_margin_bottom":0,"instafeed_margin_sides":0,"show_instagram_link":false,"link_alignment":"left","link_color":"#000000","background_color":"","feed_id":"","html_area":""}},"vibe_instagram_feed_slideshow_ricnj8":{"type":"shopify:\/\/apps\/vibe-instagram-feed\/blocks\/slideshow\/a89f8a1d-e2e4-49c3-8d2c-363211f74779","disabled":true,"settings":{"instagram_feed_id":"66598ab7bdb28ff7e2b43148","post_click_action":"popup","items_per_show_lg":"3","items_per_show_xs":"1","item_spacing_lg":30,"item_spacing_xs":10,"item_cta":"See more","item_product_cta":"Shop this look","item_ratio":"1\/1","blocktitle":"","heading_lg":26,"heading_xs":26,"description":"","description_lg":16,"description_xs":16,"text_alignment":"center","spacing_text_vs_posts_lg":24,"spacing_text_vs_posts_xs":24,"top_padding_lg":0,"bottom_padding_lg":0,"top_padding_xs":0,"bottom_padding_xs":0,"custom_css":""}}},"block_order":["instafeed_app_block_bahgQY","vibe_instagram_feed_slideshow_ricnj8"],"settings":{"include_margins":true}},"collapsible_content_Jrh7Di":{"type":"collapsible-content","blocks":{"collapsible_row_6ftW3c":{"type":"collapsible_row","settings":{"heading":"What’s different at No Dough?","icon":"none","row_content":"<p>At No Dough Bakery, our treats are carefully crafted using wholesome ingredients to provide genuine nutritional benefits. We prioritize quality by avoiding filler ingredients and unwanted additives, ensuring that everything we offer is gluten-free, vegan, and free of refined sugars. Plus, our macro-balanced treats are expertly designed by a registered dietitian, offering delicious snacks that support your health without overloading on natural sweeteners.<\/p>","page":""}},"collapsible_row_JRKYdL":{"type":"collapsible_row","settings":{"heading":"Are All Your Products Gluten-Free?","icon":"none","row_content":"<p>Yes, all our products are  free of gluten. However, please note that they are produced in a facility that also handles gluten.<\/p>","page":""}},"collapsible_row_cbEqc9":{"type":"collapsible_row","settings":{"heading":"Do Your Products Contain Refined Sugars?","icon":"none","row_content":"<p>Absolutely not. We never use refined sugars in our products. Instead, we opt for natural sweeteners with a lower glycemic index, creating healthy, balanced treats that are both delicious and nutritious.<\/p>","page":""}},"collapsible_row_wacV7r":{"type":"collapsible_row","settings":{"heading":"Are Your Products Vegan-Friendly?","icon":"none","row_content":"<p>Yes, all our products are 100% vegan.<\/p>","page":""}},"collapsible_row_rNMEck":{"type":"collapsible_row","settings":{"heading":"How Should I Store Your Products?","icon":"none","row_content":"<p>Our products are best stored in a cool, dry place. Some items may require refrigeration. Please refer to the storage instructions provided with each product for guidance.<\/p>","page":""}},"collapsible_row_WmBpkW":{"type":"collapsible_row","settings":{"heading":"Where Do You Source Your Ingredients From?","icon":"none","row_content":"<p>We meticulously source our ingredients from trusted suppliers who share our commitment to quality and sustainability. Many of our ingredients are organic and locally sourced whenever possible, ensuring the freshest and most nutritious treats for you.<\/p>","page":""}},"collapsible_row_nfWrKe":{"type":"collapsible_row","settings":{"heading":"Do You Offer Catering Services?","icon":"none","row_content":"<p>Yes, we do! Please contact us to discuss your catering needs.<\/p>","page":""}},"collapsible_row_MRmBdx":{"type":"collapsible_row","settings":{"heading":"Do You Provide Internship Opportunities?","icon":"none","row_content":"<p>Yes, we offer internship opportunities. Get in touch with us for more information.<\/p>","page":""}},"collapsible_row_ex7Dn8":{"type":"collapsible_row","settings":{"heading":"Do You Offer Custom Orders or Special Dietary Accommodations?","icon":"none","row_content":"<p>Yes, we offer custom orders and can accommodate certain dietary restrictions. Please contact us to discuss your specific needs.<\/p>","page":""}}},"block_order":["collapsible_row_6ftW3c","collapsible_row_JRKYdL","collapsible_row_cbEqc9","collapsible_row_wacV7r","collapsible_row_rNMEck","collapsible_row_WmBpkW","collapsible_row_nfWrKe","collapsible_row_MRmBdx","collapsible_row_ex7Dn8"],"disabled":true,"custom_css":[".collapsible-content__heading {color: #da6650 !important;}",".accordion__title {font-family: \"Poppins\" !important;}",".accordion__content p {text-align: left;}"],"settings":{"caption":"","heading":"FAQ","heading_size":"h1","heading_alignment":"center","layout":"none","color_scheme":"background-1","container_color_scheme":"background-1","open_first_collapsible_row":false,"image_ratio":"adapt","desktop_layout":"image_second","padding_top":60,"padding_bottom":36}},"newsletter_fG4xDJ":{"type":"newsletter","blocks":{"heading_7BbDgC":{"type":"heading","settings":{"heading":"No Dough Insider","heading_size":"h1"}},"paragraph_FynxEn":{"type":"paragraph","settings":{"text":"<p>Subscribe for first dibs on new drops, exclusive perks, and the occasional crumb of wisdom 🍪<\/p>"}},"email_form_JMcze3":{"type":"email_form","settings":{}}},"block_order":["heading_7BbDgC","paragraph_FynxEn","email_form_JMcze3"],"custom_css":["h2 {color: #da6750;}"],"name":"t:sections.newsletter.presets.name","settings":{"color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["responsive_banner","174785452395c06e9c","collection_row_xPNEac","featured_collection_RgwVgi","featured_collection","featured_collection_6L8fKJ","feature_banner_section","rich_text_bMCYGX","17330879272e0e83f6","collapsible_content_Jrh7Di","newsletter_fG4xDJ"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "responsive_banner": {
+      "type": "responsive-banner",
+      "custom_css": [
+        ".mobile-only.banner__media img {transform: scale(1.09); padding-top: 25px;}"
+      ],
+      "settings": {
+        "desktop_image": "shopify://shop_images/hero-desktop.jpg",
+        "mobile_image": "shopify://shop_images/hero-mobile.jpg",
+        "banner_height": "medium",
+        "heading": "Healthy Treats",
+        "heading_color": "#da6750",
+        "heading_font_size_desktop": 80,
+        "heading_line_height_desktop": 80,
+        "heading_margin_bottom_desktop": 25,
+        "heading_font_size_mobile": 50,
+        "heading_line_height_mobile": 50,
+        "heading_margin_bottom_mobile": 10,
+        "primary_text": "<p><strong>Happy Eats</strong></p>",
+        "primary_text_color": "#da6750",
+        "primary_text_font_size_desktop": 32,
+        "primary_text_line_height_desktop": 30,
+        "primary_text_margin_bottom_desktop": 35,
+        "primary_text_font_size_mobile": 18,
+        "primary_text_line_height_mobile": 18,
+        "primary_text_margin_bottom_mobile": 25,
+        "secondary_text": "<p>Whole Food Based, Nutrient Dense Products</p>",
+        "secondary_text_color": "#da6750",
+        "secondary_text_font_size_desktop": 20,
+        "secondary_text_line_height_desktop": 26,
+        "secondary_text_margin_bottom_desktop": 25,
+        "secondary_text_font_size_mobile": 14,
+        "secondary_text_line_height_mobile": 14,
+        "secondary_text_margin_bottom_mobile": 10,
+        "button_text": "Shop Now",
+        "button_link": "shopify://collections/all",
+        "button_background_color": "#da6750",
+        "button_text_color": "#ffffff",
+        "image_overlay_opacity": 0,
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "logo_bar_pH4Mdn": {
+      "type": "logo-bar",
+      "blocks": {
+        "logo_BQwNJF": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/no-sugar.svg",
+            "svg_code": "",
+            "text": "<p>No Sugar</p>",
+            "button_link": ""
+          }
+        },
+        "logo_rLDAVN": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/gluten-free.svg",
+            "svg_code": "",
+            "text": "<p>gluten free</p>",
+            "button_link": ""
+          }
+        },
+        "logo_UwM649": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/balanced-macros.svg",
+            "svg_code": "",
+            "text": "<p>balanced macros</p>",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_BQwNJF",
+        "logo_rLDAVN",
+        "logo_UwM649"
+      ],
+      "name": "Logo Bar",
+      "settings": {
+        "enable_marquee": true,
+        "animation_duration": 60,
+        "duplicates": 30,
+        "is_compact": false,
+        "color_theme": "color_theme__dark",
+        "top_spacing_mobile": 0,
+        "bottom_spacing_mobile": 0,
+        "top_spacing_desktop": 0,
+        "bottom_spacing_desktop": 0,
+        "bg_color": "",
+        "top_divider": "none",
+        "top_divider_color": "#ffffff",
+        "custom_class": "",
+        "custom_id": ""
+      }
+    },
+    "collection_row_xPNEac": {
+      "type": "collection-row",
+      "blocks": {
+        "card_E6Lwjb": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Page_Cat_3.webp",
+            "title": "Nut Butters",
+            "link_url": "shopify://collections/nut-butter"
+          }
+        },
+        "card_rpfceE": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Cat_Loaf.webp",
+            "title": "Brownies & Bites",
+            "link_url": "shopify://collections/brownies"
+          }
+        },
+        "card_mUK6Wc": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Page_Cat_Biscuits.webp",
+            "title": "Biscuits & Granola",
+            "link_url": "shopify://collections/granola"
+          }
+        },
+        "card_WwzAJY": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Page_Cat_Tort.webp",
+            "title": "Tortillas",
+            "link_url": "shopify://collections/tortillas"
+          }
+        },
+        "card_LVRLUh": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Cat_every_day.webp",
+            "title": "Cakes & Cupcakes",
+            "link_url": "shopify://collections/cakes-cupcakes"
+          }
+        }
+      },
+      "block_order": [
+        "card_E6Lwjb",
+        "card_rpfceE",
+        "card_mUK6Wc",
+        "card_WwzAJY",
+        "card_LVRLUh"
+      ],
+      "custom_css": [],
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "title_font_size": 20,
+        "title_padding_top": 20,
+        "title_padding_left": 20,
+        "card_height": 400
+      }
+    },
+    "featured_collection_RgwVgi": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "title": "Eat Cake. Be Happy.",
+        "heading_size": "h2",
+        "description": "<p>Perfect of any celebration or just because.</p>",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "cakes-cupcakes",
+        "products_to_show": 25,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 56
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "title": "Spread the Love",
+        "heading_size": "h0",
+        "description": "<p>spread, dip or enjoy by the spoonful</p>",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "nut-butter",
+        "products_to_show": 25,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "accent-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_6L8fKJ": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [
+        ".card {border-radius: 15px; overflow: hidden; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); background: #f3d8d1; padding: 10px; transition: 0.3s;}",
+        ".card:hover {transform: scale(1.03);}",
+        ".card__heading {font-family: \"Poppins\" !important; text-transform: uppercase; font-weight: 500; text-align: center; font-size: 1.6rem;}",
+        ".price {text-align: center; color: #da6750;}",
+        ".title,.collection__description {text-align: center;}",
+        ".title {margin-top: 2em; margin-bottom: 1em; color: #da6750; font-size: 50px;}"
+      ],
+      "settings": {
+        "title": "Shop Now",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "brownies",
+        "products_to_show": 25,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "feature_banner_section": {
+      "type": "feature-banner",
+      "blocks": {
+        "block_wL64V8": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/vegan.svg",
+            "item_title": "No Artificial or Zero-Calorie Sweeteners",
+            "item_subtitle": "These disrupt your gut lining and hunger signals. Instead, our treats are balanced with healthy fats and carbs to keep you full, nourished, and satisfied all day lon."
+          }
+        },
+        "block_CDanGH": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/balanced-macros.svg",
+            "item_title": "No Refined Oils",
+            "item_subtitle": "We only use unrefined virgin coconut oil, avocado oil, or olive oil—clean and nourishing, just like the rest of our ingredients."
+          }
+        },
+        "block_J9NV7H": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/gluten-free.svg",
+            "item_title": "Gut-Friendly & Gluten-Free",
+            "item_subtitle": "No processed GF flours that are tough to digest. We use sprouted oats, sprouted nut flours, and easily digestible millets, making our products gentle on your gut."
+          }
+        },
+        "block_D6zVEe": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/paleo.svg",
+            "item_title": "Made from Scratch",
+            "item_subtitle": "From grinding our own oat flour to making our own chocolate, we take pride in doing everything ourselves for the highest quality."
+          }
+        },
+        "block_hJPgRi": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify://shop_images/no-sugar.svg",
+            "item_title": "Refined Sugar-Free & Nutritionally Balanced",
+            "item_subtitle": "No sugar bombs or energy crashes here. Our treats are designed to support steady blood sugar levels, keeping your insulin response healthy and your energy stable."
+          }
+        }
+      },
+      "block_order": [
+        "block_wL64V8",
+        "block_CDanGH",
+        "block_J9NV7H",
+        "block_D6zVEe",
+        "block_hJPgRi"
+      ],
+      "custom_css": [
+        ".feature-banner-section {margin-left: -50px !important; margin-right: -50px !important; width: calc(100% + 100px) !important; margin-top: -50px !important;}",
+        ".feature-banner-section .content-container > p {text-transform: uppercase; font-weight: 600; margin-top: -20px;}",
+        ".feature-blocks h3 {font-family: \"Poppins\" !important; margin-bottom: 0;}",
+        ".center-image {min-width: 350px;}",
+        "@media (min-width: 768px) {.right-blocks, .left-blocks {max-width: 30%; }}"
+      ],
+      "settings": {
+        "title": "Bye Bye Cheat Days",
+        "subtitle": "Made with real whole food ingredients that your body will love",
+        "bg_image_desktop": "shopify://shop_images/section3-bg-updated_d4848119-31a5-4236-95de-9782c0507ef7.jpg",
+        "center_image": "shopify://shop_images/section3-products.png",
+        "title_color": "#da6750",
+        "title_font_size": 50,
+        "subtitle_color": "#000000",
+        "subtitle_font_size": 18,
+        "item_title_color": "#da6750",
+        "item_title_font_size": 25,
+        "item_subtitle_color": "#666666",
+        "item_subtitle_font_size": 14,
+        "section_padding_left": "",
+        "section_padding_right": "",
+        "feature_padding": "",
+        "left_feature_text_alignment": "left",
+        "right_feature_text_alignment": "right",
+        "left_icon_position": "left",
+        "right_icon_position": "right"
+      }
+    },
+    "rich_text_bMCYGX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CtxKQE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join our community",
+            "heading_size": "h0"
+          }
+        },
+        "text_FKJGkU": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Follow us on instagram :)</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CtxKQE",
+        "text_FKJGkU"
+      ],
+      "custom_css": [
+        "h2 {color: #da6750;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "17330879272e0e83f6": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_bahgQY": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        },
+        "vibe_instagram_feed_slideshow_ricnj8": {
+          "type": "shopify://apps/vibe/blocks/slideshow/a89f8a1d-e2e4-49c3-8d2c-363211f74779",
+          "disabled": true,
+          "settings": {
+            "instagram_feed_id": "66598ab7bdb28ff7e2b43148",
+            "post_click_action": "popup",
+            "items_per_show_lg": "3",
+            "items_per_show_xs": "1",
+            "item_spacing_lg": 30,
+            "item_spacing_xs": 10,
+            "item_cta": "See more",
+            "item_product_cta": "Shop this look",
+            "item_ratio": "1/1",
+            "blocktitle": "",
+            "heading_lg": 26,
+            "heading_xs": 26,
+            "description": "",
+            "description_lg": 16,
+            "description_xs": 16,
+            "text_alignment": "center",
+            "spacing_text_vs_posts_lg": 24,
+            "spacing_text_vs_posts_xs": 24,
+            "top_padding_lg": 0,
+            "bottom_padding_lg": 0,
+            "top_padding_xs": 0,
+            "bottom_padding_xs": 0,
+            "custom_css": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_bahgQY",
+        "vibe_instagram_feed_slideshow_ricnj8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "collapsible_content_Jrh7Di": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_6ftW3c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What’s different at No Dough?",
+            "icon": "none",
+            "row_content": "<p>At No Dough Bakery, our treats are carefully crafted using wholesome ingredients to provide genuine nutritional benefits. We prioritize quality by avoiding filler ingredients and unwanted additives, ensuring that everything we offer is gluten-free, vegan, and free of refined sugars. Plus, our macro-balanced treats are expertly designed by a registered dietitian, offering delicious snacks that support your health without overloading on natural sweeteners.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_JRKYdL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are All Your Products Gluten-Free?",
+            "icon": "none",
+            "row_content": "<p>Yes, all our products are  free of gluten. However, please note that they are produced in a facility that also handles gluten.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cbEqc9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do Your Products Contain Refined Sugars?",
+            "icon": "none",
+            "row_content": "<p>Absolutely not. We never use refined sugars in our products. Instead, we opt for natural sweeteners with a lower glycemic index, creating healthy, balanced treats that are both delicious and nutritious.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wacV7r": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Are Your Products Vegan-Friendly?",
+            "icon": "none",
+            "row_content": "<p>Yes, all our products are 100% vegan.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rNMEck": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Should I Store Your Products?",
+            "icon": "none",
+            "row_content": "<p>Our products are best stored in a cool, dry place. Some items may require refrigeration. Please refer to the storage instructions provided with each product for guidance.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WmBpkW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where Do You Source Your Ingredients From?",
+            "icon": "none",
+            "row_content": "<p>We meticulously source our ingredients from trusted suppliers who share our commitment to quality and sustainability. Many of our ingredients are organic and locally sourced whenever possible, ensuring the freshest and most nutritious treats for you.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_nfWrKe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do You Offer Catering Services?",
+            "icon": "none",
+            "row_content": "<p>Yes, we do! Please contact us to discuss your catering needs.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_MRmBdx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do You Provide Internship Opportunities?",
+            "icon": "none",
+            "row_content": "<p>Yes, we offer internship opportunities. Get in touch with us for more information.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ex7Dn8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do You Offer Custom Orders or Special Dietary Accommodations?",
+            "icon": "none",
+            "row_content": "<p>Yes, we offer custom orders and can accommodate certain dietary restrictions. Please contact us to discuss your specific needs.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_6ftW3c",
+        "collapsible_row_JRKYdL",
+        "collapsible_row_cbEqc9",
+        "collapsible_row_wacV7r",
+        "collapsible_row_rNMEck",
+        "collapsible_row_WmBpkW",
+        "collapsible_row_nfWrKe",
+        "collapsible_row_MRmBdx",
+        "collapsible_row_ex7Dn8"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".collapsible-content__heading {color: #da6650 !important;}",
+        ".accordion__title {font-family: \"Poppins\" !important;}",
+        ".accordion__content p {text-align: left;}"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_fG4xDJ": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_7BbDgC": {
+          "type": "heading",
+          "settings": {
+            "heading": "No Dough Insider",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_FynxEn": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Subscribe for first dibs on new drops, exclusive perks, and the occasional crumb of wisdom 🍪</p>"
+          }
+        },
+        "email_form_JMcze3": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_7BbDgC",
+        "paragraph_FynxEn",
+        "email_form_JMcze3"
+      ],
+      "custom_css": [
+        "h2 {color: #da6750;}"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "responsive_banner",
+    "logo_bar_pH4Mdn",
+    "collection_row_xPNEac",
+    "featured_collection_RgwVgi",
+    "featured_collection",
+    "featured_collection_6L8fKJ",
+    "feature_banner_section",
+    "rich_text_bMCYGX",
+    "17330879272e0e83f6",
+    "collapsible_content_Jrh7Di",
+    "newsletter_fG4xDJ"
+  ]
+}
