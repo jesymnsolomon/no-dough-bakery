@@ -149,8 +149,8 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#313638",
-          "button": "#ff7930",
-          "button_hover": "#ec6820",
+          "button": "#ffbb23",
+          "button_hover": "#ffc700",
           "button_label": "#ffffff",
           "secondary_button_label": "rgba(0,0,0,0)",
           "shadow": "rgba(0,0,0,0)"
