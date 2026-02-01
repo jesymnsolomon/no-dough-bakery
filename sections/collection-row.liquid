@@ -1,0 +1,240 @@
+<style>
+.collection-row-section {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to new rows */
+  gap: 1px;
+  width: 100%; /* Ensure the container spans the full width */
+  background: var(--section-background);
+}
+
+.collection-row-section .card-item {
+  position: relative;
+  background-color: var(--card-background-color, #f9f9f9);
+  width: 19.8%; /* 20% width for desktop */
+  height: var(--card-height);
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  transition: transform 0.3s ease, color 0.1s ease;
+}
+
+.collection-row-section .card-item:hover {
+  transform: scale(1.02);
+  color: #fff; /* On hover: text turns white */
+}
+
+/* Title at top-left */
+.collection-row-section .card-title {
+  position: absolute;
+  top: var(--title-padding-top, 10px);
+  left: var(--title-padding-left, 10px);
+  font-size: var(--title-font-size);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  max-width: 60%;
+  z-index: 2;
+  transition: color 0.1s ease;
+}
+
+/* Background images handled via inline styles */
+.collection-row-section .card-image-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease;
+}
+
+/* On hover, if hover image is set, switch background */
+.collection-row-section .card-item:hover .card-image-container[data-hover-image] {
+  background-image: var(--hover-image-url);
+}
+
+/* Tablet: 50% width per card */
+@media screen and (max-width: 1024px) {
+  .collection-row-section .card-item {
+    width: 50%; /* Fixed 50% width on tablets */
+  }
+}
+
+/* Mobile: 100% width per card */
+@media screen and (max-width: 768px) {
+  .collection-row-section .card-item {
+    width: 100%; /* Fixed 100% width on mobile */
+    margin-bottom: 10px; /* Spacing between rows */
+  }
+}
+</style>
+
+<div class="collection-row-section" style="--section-background: {{ section.settings.background_color }};">
+  {% for block in section.blocks %}
+    {% assign block_bg = block.settings.background_color | default: '#f9f9f9' %}
+    {% assign main_image = block.settings.main_image %}
+    {% assign hover_image = block.settings.hover_image %}
+    {% assign title = block.settings.title %}
+    {% assign link_url = block.settings.link_url %}
+
+    <a 
+      href="{{ link_url }}"
+      class="card-item"
+      style="
+        --card-background-color: {{ block_bg }};
+        --card-height: {{ section.settings.card_height }}px;
+      "
+    >
+      <div 
+        class="card-image-container"
+        style="background-image: url({{ main_image | image_url: width: 400 }});"
+        {% if hover_image %}
+          data-hover-image="true"
+          style="background-image: url({{ main_image | image_url: width: 400 }}); --hover-image-url: url({{ hover_image | image_url: width: 400 }});"
+        {% endif %}
+      >
+        {% if title %}
+          <div class="card-title">{{ title }}</div>
+        {% endif %}
+      </div>
+    </a>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Collection Row",
+  "tag": "section",
+  "class": "collection-row-section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "title_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 10,
+      "label": "Title top padding"
+    },
+    {
+      "type": "range",
+      "id": "title_padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 10,
+      "label": "Title left padding"
+    },
+    {
+      "type": "range",
+      "id": "card_height",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "unit": "px",
+      "label": "Card height",
+      "default": 400
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Card background color",
+          "default": "#f9f9f9"
+        },
+        {
+          "type": "image_picker",
+          "id": "main_image",
+          "label": "Main image"
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Hover image (optional)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Your Title"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL",
+          "default": "/"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Row",
+      "blocks": [
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+:root {
+  --section-padding-top: {{ section.settings.padding_top }}px;
+  --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  --title-font-size: {{ section.settings.title_font_size }}px;
+  --title-padding-top: {{ section.settings.title_padding_top }}px;
+  --title-padding-left: {{ section.settings.title_padding_left }}px;
+}
+{% endstyle %}
