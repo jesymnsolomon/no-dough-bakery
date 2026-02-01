@@ -12,14 +12,15 @@
     "responsive_banner": {
       "type": "responsive-banner",
       "custom_css": [
-        ".mobile-only.banner__media img {transform: scale(1.09); padding-top: 25px;}"
+        ".mobile-only.banner__media img {transform: scale(1.09); padding-top: 25px;}",
+        ".banner__heading {font-family: \"Abril Fatface\" !important;}"
       ],
       "settings": {
         "desktop_image": "shopify://shop_images/hero-desktop.jpg",
         "mobile_image": "shopify://shop_images/hero-mobile.jpg",
         "banner_height": "medium",
         "heading": "Healthy Treats",
-        "heading_color": "#da6750",
+        "heading_color": "#c66c5e",
         "heading_font_size_desktop": 80,
         "heading_line_height_desktop": 80,
         "heading_margin_bottom_desktop": 25,
@@ -44,7 +45,7 @@
         "secondary_text_margin_bottom_mobile": 10,
         "button_text": "Shop Now",
         "button_link": "shopify://collections/all",
-        "button_background_color": "#da6750",
+        "button_background_color": "#ff5345",
         "button_text_color": "#ffffff",
         "image_overlay_opacity": 0,
         "color_scheme": "background-1",
@@ -93,84 +94,70 @@
         "enable_marquee": true,
         "animation_duration": 60,
         "duplicates": 30,
-        "is_compact": false,
-        "color_theme": "color_theme__dark",
+        "color_theme": "color_theme__light",
         "top_spacing_mobile": 0,
         "bottom_spacing_mobile": 0,
         "top_spacing_desktop": 0,
         "bottom_spacing_desktop": 0,
-        "bg_color": "",
-        "top_divider": "none",
-        "top_divider_color": "#ffffff",
+        "bg_color": "#db6751",
         "custom_class": "",
         "custom_id": ""
       }
     },
-    "collection_row_xPNEac": {
-      "type": "collection-row",
+    "collection_list_xcCfib": {
+      "type": "collection-list",
       "blocks": {
-        "card_E6Lwjb": {
-          "type": "card",
+        "featured_collection_gHeXDy": {
+          "type": "featured_collection",
           "settings": {
-            "background_color": "#f9f9f9",
-            "main_image": "shopify://shop_images/Home_Page_Cat_3.webp",
-            "title": "Nut Butters",
-            "link_url": "shopify://collections/nut-butter"
+            "collection": "nut-butter"
           }
         },
-        "card_rpfceE": {
-          "type": "card",
+        "featured_collection_eLpM48": {
+          "type": "featured_collection",
           "settings": {
-            "background_color": "#f9f9f9",
-            "main_image": "shopify://shop_images/Home_Cat_Loaf.webp",
-            "title": "Brownies & Bites",
-            "link_url": "shopify://collections/brownies"
+            "collection": "granola"
           }
         },
-        "card_mUK6Wc": {
-          "type": "card",
+        "featured_collection_RN6FRJ": {
+          "type": "featured_collection",
           "settings": {
-            "background_color": "#f9f9f9",
-            "main_image": "shopify://shop_images/Home_Page_Cat_Biscuits.webp",
-            "title": "Biscuits & Granola",
-            "link_url": "shopify://collections/granola"
+            "collection": "biscuits"
           }
         },
-        "card_WwzAJY": {
-          "type": "card",
+        "featured_collection_6GbnpT": {
+          "type": "featured_collection",
           "settings": {
-            "background_color": "#f9f9f9",
-            "main_image": "shopify://shop_images/Home_Page_Cat_Tort.webp",
-            "title": "Tortillas",
-            "link_url": "shopify://collections/tortillas"
+            "collection": "tortillas"
           }
         },
-        "card_LVRLUh": {
-          "type": "card",
+        "featured_collection_BEwFWY": {
+          "type": "featured_collection",
           "settings": {
-            "background_color": "#f9f9f9",
-            "main_image": "shopify://shop_images/Home_Cat_every_day.webp",
-            "title": "Cakes & Cupcakes",
-            "link_url": "shopify://collections/cakes-cupcakes"
+            "collection": "cakes-cupcakes"
           }
         }
       },
       "block_order": [
-        "card_E6Lwjb",
-        "card_rpfceE",
-        "card_mUK6Wc",
-        "card_WwzAJY",
-        "card_LVRLUh"
+        "featured_collection_gHeXDy",
+        "featured_collection_eLpM48",
+        "featured_collection_RN6FRJ",
+        "featured_collection_6GbnpT",
+        "featured_collection_BEwFWY"
       ],
-      "custom_css": [],
+      "disabled": true,
+      "name": "t:sections.collection-list.presets.name",
       "settings": {
-        "background_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "title_font_size": 20,
-        "title_padding_top": 20,
-        "title_padding_left": 20,
-        "card_height": 400
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection_RgwVgi": {
@@ -178,8 +165,8 @@
       "custom_css": [],
       "settings": {
         "title": "Eat Cake. Be Happy.",
-        "heading_size": "h2",
-        "description": "<p>Perfect of any celebration or just because.</p>",
+        "heading_size": "h0",
+        "description": "<p><strong>Our Best Sellers</strong> — Perfect of any celebration or just because.</p>",
         "show_description": false,
         "description_style": "uppercase",
         "collection": "cakes-cupcakes",
@@ -189,7 +176,7 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
-        "color_scheme": "background-2",
+        "color_scheme": "accent-1",
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -198,74 +185,8 @@
         "enable_quick_add": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 56
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "custom_css": [],
-      "settings": {
-        "title": "Spread the Love",
-        "heading_size": "h0",
-        "description": "<p>spread, dip or enjoy by the spoonful</p>",
-        "show_description": false,
-        "description_style": "uppercase",
-        "collection": "nut-butter",
-        "products_to_show": 25,
-        "columns_desktop": 4,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "accent-1",
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 20,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection_6L8fKJ": {
-      "type": "featured-collection",
-      "disabled": true,
-      "custom_css": [
-        ".card {border-radius: 15px; overflow: hidden; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); background: #f3d8d1; padding: 10px; transition: 0.3s;}",
-        ".card:hover {transform: scale(1.03);}",
-        ".card__heading {font-family: \"Poppins\" !important; text-transform: uppercase; font-weight: 500; text-align: center; font-size: 1.6rem;}",
-        ".price {text-align: center; color: #da6750;}",
-        ".title,.collection__description {text-align: center;}",
-        ".title {margin-top: 2em; margin-bottom: 1em; color: #da6750; font-size: 50px;}"
-      ],
-      "settings": {
-        "title": "Shop Now",
-        "heading_size": "h0",
-        "description": "",
-        "show_description": false,
-        "description_style": "uppercase",
-        "collection": "brownies",
-        "products_to_show": 25,
-        "columns_desktop": 4,
-        "full_width": true,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 36
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "feature_banner_section": {
@@ -346,6 +267,166 @@
         "right_feature_text_alignment": "right",
         "left_icon_position": "left",
         "right_icon_position": "right"
+      }
+    },
+    "rich_text_XCgc4W": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CL8YdW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our treats",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CL8YdW"
+      ],
+      "custom_css": [
+        ".rich-text {margin-top: -80px;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-2",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_row_xPNEac": {
+      "type": "collection-row",
+      "blocks": {
+        "card_E6Lwjb": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Page_Cat_3.webp",
+            "title": "Nut Butters",
+            "link_url": "shopify://collections/nut-butter"
+          }
+        },
+        "card_rpfceE": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Cat_Loaf.webp",
+            "title": "Brownies & Bites",
+            "link_url": "shopify://collections/brownies"
+          }
+        },
+        "card_mUK6Wc": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Page_Cat_Biscuits.webp",
+            "title": "Biscuits & Granola",
+            "link_url": "shopify://collections/granola"
+          }
+        },
+        "card_WwzAJY": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Page_Cat_Tort.webp",
+            "title": "Tortillas",
+            "link_url": "shopify://collections/tortillas"
+          }
+        },
+        "card_LVRLUh": {
+          "type": "card",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "main_image": "shopify://shop_images/Home_Cat_every_day.webp",
+            "title": "Cakes & Cupcakes",
+            "link_url": "shopify://collections/cakes-cupcakes"
+          }
+        }
+      },
+      "block_order": [
+        "card_E6Lwjb",
+        "card_rpfceE",
+        "card_mUK6Wc",
+        "card_WwzAJY",
+        "card_LVRLUh"
+      ],
+      "custom_css": [],
+      "settings": {
+        "background_color": "#f3d9d1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "title_font_size": 20,
+        "title_padding_top": 20,
+        "title_padding_left": 20,
+        "card_height": 210
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "title": "Spread the Love",
+        "heading_size": "h0",
+        "description": "<p>spread, dip or enjoy by the spoonful</p>",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "nut-butter",
+        "products_to_show": 25,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "accent-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection_6L8fKJ": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [
+        ".card {border-radius: 15px; overflow: hidden; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); background: #f3d8d1; padding: 10px; transition: 0.3s;}",
+        ".card:hover {transform: scale(1.03);}",
+        ".card__heading {font-family: \"Poppins\" !important; text-transform: uppercase; font-weight: 500; text-align: center; font-size: 1.6rem;}",
+        ".price {text-align: center; color: #da6750;}",
+        ".title,.collection__description {text-align: center;}",
+        ".title {margin-top: 2em; margin-bottom: 1em; color: #da6750; font-size: 50px;}"
+      ],
+      "settings": {
+        "title": "Shop Now",
+        "heading_size": "h0",
+        "description": "",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "brownies",
+        "products_to_show": 25,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "rich_text_bMCYGX": {
@@ -598,11 +679,13 @@
   "order": [
     "responsive_banner",
     "logo_bar_pH4Mdn",
-    "collection_row_xPNEac",
+    "collection_list_xcCfib",
     "featured_collection_RgwVgi",
+    "feature_banner_section",
+    "rich_text_XCgc4W",
+    "collection_row_xPNEac",
     "featured_collection",
     "featured_collection_6L8fKJ",
-    "feature_banner_section",
     "rich_text_bMCYGX",
     "17330879272e0e83f6",
     "collapsible_content_Jrh7Di",

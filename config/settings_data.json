@@ -149,8 +149,8 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text": "#313638",
-          "button": "#da6750",
-          "button_hover": "#b3432d",
+          "button": "#ff7930",
+          "button_hover": "#ec6820",
           "button_label": "#ffffff",
           "secondary_button_label": "rgba(0,0,0,0)",
           "shadow": "rgba(0,0,0,0)"
@@ -202,6 +202,18 @@
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
+        }
+      },
+      "scheme-61a3effd-7afd-4b9b-911c-2677fcb28cce": {
+        "settings": {
+          "background": "#f7f1e1",
+          "background_gradient": "",
+          "text": "#313638",
+          "button": "#ff7930",
+          "button_hover": "#ec6820",
+          "button_label": "#ffffff",
+          "secondary_button_label": "rgba(0,0,0,0)",
+          "shadow": "rgba(0,0,0,0)"
         }
       }
     }
