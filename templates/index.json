@@ -18,9 +18,9 @@
       "settings": {
         "desktop_image": "shopify://shop_images/hero-desktop.jpg",
         "mobile_image": "shopify://shop_images/hero-mobile.jpg",
-        "banner_height": "medium",
+        "banner_height": "small",
         "heading": "Healthy Treats",
-        "heading_color": "#c66c5e",
+        "heading_color": "#d65338",
         "heading_font_size_desktop": 80,
         "heading_line_height_desktop": 80,
         "heading_margin_bottom_desktop": 25,
@@ -56,12 +56,39 @@
     "logo_bar_pH4Mdn": {
       "type": "logo-bar",
       "blocks": {
+        "logo_Jeqgcf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/seed-oil-free_0.5x.png",
+            "svg_code": "",
+            "text": "<p>Seed Oil Free</p>",
+            "button_link": ""
+          }
+        },
+        "logo_LfWAt8": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/dairy-free_0.5x.png",
+            "svg_code": "",
+            "text": "<p>Dairy Free</p>",
+            "button_link": ""
+          }
+        },
+        "logo_jgpjBC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Vegan_Icon_a8b37e4b-7594-408c-8595-5ff888cf725e.webp",
+            "svg_code": "",
+            "text": "<p>Vegan</p>",
+            "button_link": ""
+          }
+        },
         "logo_BQwNJF": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/no-sugar.svg",
             "svg_code": "",
-            "text": "<p>No Sugar</p>",
+            "text": "<p>No Refined Sugar</p>",
             "button_link": ""
           }
         },
@@ -85,6 +112,9 @@
         }
       },
       "block_order": [
+        "logo_Jeqgcf",
+        "logo_LfWAt8",
+        "logo_jgpjBC",
         "logo_BQwNJF",
         "logo_rLDAVN",
         "logo_UwM649"
@@ -92,7 +122,7 @@
       "name": "Logo Bar",
       "settings": {
         "enable_marquee": true,
-        "animation_duration": 60,
+        "animation_duration": 100,
         "duplicates": 30,
         "color_theme": "color_theme__light",
         "top_spacing_mobile": 0,
@@ -164,16 +194,16 @@
       "type": "featured-collection",
       "custom_css": [],
       "settings": {
-        "title": "Eat Cake. Be Happy.",
+        "title": "Our Crowd Favorites",
         "heading_size": "h0",
-        "description": "<p><strong>Our Best Sellers</strong> — Perfect of any celebration or just because.</p>",
+        "description": "<p>Our most loved treats, made fresh and enjoyed daily.</p>",
         "show_description": false,
         "description_style": "uppercase",
-        "collection": "cakes-cupcakes",
+        "collection": "best-sellers",
         "products_to_show": 25,
         "columns_desktop": 4,
         "full_width": true,
-        "show_view_all": false,
+        "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "color_scheme": "accent-1",
@@ -183,10 +213,12 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 48,
-        "padding_bottom": 48
+        "padding_bottom": 84,
+        "divider": "2",
+        "divider_color": "#f3d9d1"
       }
     },
     "feature_banner_section": {
@@ -250,11 +282,11 @@
       "settings": {
         "title": "Bye Bye Cheat Days",
         "subtitle": "Made with real whole food ingredients that your body will love",
-        "bg_image_desktop": "shopify://shop_images/section3-bg-updated_d4848119-31a5-4236-95de-9782c0507ef7.jpg",
+        "bg_image_desktop": "shopify://shop_images/section3-bg-updated_e748dfc7-9489-4ed9-83d2-e9336b2ef62d.jpg",
         "center_image": "shopify://shop_images/section3-products.png",
-        "title_color": "#da6750",
+        "title_color": "#000000",
         "title_font_size": 50,
-        "subtitle_color": "#000000",
+        "subtitle_color": "#412420",
         "subtitle_font_size": 18,
         "item_title_color": "#da6750",
         "item_title_font_size": 25,
@@ -266,7 +298,9 @@
         "left_feature_text_alignment": "left",
         "right_feature_text_alignment": "right",
         "left_icon_position": "left",
-        "right_icon_position": "right"
+        "right_icon_position": "right",
+        "divider": "none",
+        "divider_color": "#ffffff"
       }
     },
     "rich_text_XCgc4W": {
@@ -292,8 +326,8 @@
         "content_alignment": "center",
         "color_scheme": "background-2",
         "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "collection_row_xPNEac": {
@@ -356,11 +390,44 @@
       "settings": {
         "background_color": "#f3d9d1",
         "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_bottom": 44,
         "title_font_size": 20,
         "title_padding_top": 20,
         "title_padding_left": 20,
-        "card_height": 210
+        "card_height": 210,
+        "divider": "2",
+        "divider_color": "#f7f1e1"
+      }
+    },
+    "featured_collection_3tGcNH": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "settings": {
+        "title": "Eat Cake. Be Happy.",
+        "heading_size": "h0",
+        "description": "<p>Perfect of any celebration or just because.</p>",
+        "show_description": false,
+        "description_style": "uppercase",
+        "collection": "cakes-cupcakes",
+        "products_to_show": 25,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-61a3effd-7afd-4b9b-911c-2677fcb28cce",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 8,
+        "padding_bottom": 80,
+        "divider": "2",
+        "divider_color": "#f4d8d1"
       }
     },
     "featured_collection": {
@@ -379,7 +446,7 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
-        "color_scheme": "accent-1",
+        "color_scheme": "background-2",
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -388,8 +455,10 @@
         "enable_quick_add": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 20,
-        "padding_bottom": 0
+        "padding_top": 8,
+        "padding_bottom": 0,
+        "divider": "none",
+        "divider_color": "#ffffff"
       }
     },
     "featured_collection_6L8fKJ": {
@@ -426,7 +495,9 @@
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "divider": "none",
+        "divider_color": "#ffffff"
       }
     },
     "rich_text_bMCYGX": {
@@ -684,6 +755,7 @@
     "feature_banner_section",
     "rich_text_XCgc4W",
     "collection_row_xPNEac",
+    "featured_collection_3tGcNH",
     "featured_collection",
     "featured_collection_6L8fKJ",
     "rich_text_bMCYGX",
