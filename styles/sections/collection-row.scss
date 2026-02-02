@@ -2,9 +2,10 @@
   justify-content: center;
 
   .collection-row-section {
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     height: 100%;
   }
+
   a.card-item {
     display: flex;
     flex-direction: column;
@@ -17,10 +18,11 @@
 
     .card-image-container {
       aspect-ratio: 1/1;
+      width: auto;
       border-radius: rem-calc(200px);
       padding: 5px;
       border: 2px solid white;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     .card-title {
@@ -29,7 +31,9 @@
       max-width: none;
       top: 0;
       left: 0;
-      font-family: var(--font-heading-family);
+      font-family: var(--font-body-family);
+      font-size: rem-calc(25px);
+      font-weight: 500;
       text-transform: none;
     }
 

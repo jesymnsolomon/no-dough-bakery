@@ -7,11 +7,25 @@
     }
 
     &.medium-size {
-      height: 100vh;
+      height: 90vh;
     }
 
     &.small-size {
+      height: 75vh;
+    }
+  }
+
+   @include breakpoint(medium down) {
+    &.large-size {
+      height: 110vh;
+    }
+
+    &.medium-size {
       height: 90vh;
+    }
+
+    &.small-size {
+      height: 75vh;
     }
   }
 

@@ -162,6 +162,8 @@
   </div>
 </div>
 
+{%- render 'component_dividers' -%}
+
 {% schema %}
 {
   "name": "t:sections.featured-collection.name",
@@ -435,6 +437,36 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Divider Settings"
+    },
+    {
+      "type": "select",
+      "id": "divider",
+      "label": "Divider",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "1",
+          "label": "Divider 1"
+        },
+        {
+          "value": "2",
+          "label": "Divider 2"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider Color",
+      "default": "#ffffff"
     }
   ],
   "presets": [

@@ -1,0 +1,24 @@
+section {
+  position: relative;
+}
+
+body {
+  width: 100vw; /* full viewport width */
+  max-width: 100%; /* prevent overflow */
+  margin: 0; /* remove default body margin */
+  padding: 0; /* optional */
+  overflow-x: hidden; /* hide horizontal scroll if something spills */
+  box-sizing: border-box; /* include padding/border in width */
+}
+
+.section-divider {
+  position: absolute;
+  z-index: 999;
+  bottom: -25px;
+  width: 100%;
+
+  svg,
+  img {
+    width: 100%;
+  }
+}

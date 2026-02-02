@@ -1,6 +1,6 @@
-<div class="feature-banner-section" 
+<div class="feature-banner-section"
      style="background-image: url({{ section.settings.bg_image_desktop | image_url }}); padding-left: {{ section.settings.section_padding_left }}px; padding-right: {{ section.settings.section_padding_right }}px;">
-  
+
   <div class="content-container">
     <!-- Title and Subtitle -->
     <h2 style="color: {{ section.settings.title_color }}; font-size: {{ section.settings.title_font_size }}px;">
@@ -12,7 +12,7 @@
 
     <!-- Responsive Layout -->
     <div class="blocks-and-image">
-      
+
       <!-- Left Feature Blocks -->
       <div class="feature-blocks left-blocks" style="padding-right: {{ section.settings.feature_padding }}px;">
         {% for block in section.blocks limit: 3 %}
@@ -20,9 +20,9 @@
             <div class="icon-text-row" style="text-align: {{ section.settings.left_feature_text_alignment }};">
               {% if section.settings.left_icon_position == "left" %}
                 {% if block.settings.icon %}
-                  <img src="{{ block.settings.icon | image_url }}" 
-                       alt="{{ block.settings.item_title }}" 
-                       width="50" 
+                  <img src="{{ block.settings.icon | image_url }}"
+                       alt="{{ block.settings.item_title }}"
+                       width="50"
                        height="50">
                 {% endif %}
               {% endif %}
@@ -36,9 +36,9 @@
               </div>
               {% if section.settings.left_icon_position == "right" %}
                 {% if block.settings.icon %}
-                  <img src="{{ block.settings.icon | image_url }}" 
-                       alt="{{ block.settings.item_title }}" 
-                       width="50" 
+                  <img src="{{ block.settings.icon | image_url }}"
+                       alt="{{ block.settings.item_title }}"
+                       width="50"
                        height="50">
                 {% endif %}
               {% endif %}
@@ -50,9 +50,9 @@
       <!-- Center Image -->
       {% if section.settings.center_image %}
         <div class="center-image">
-          <img src="{{ section.settings.center_image | image_url }}" 
-               alt="Center Product Image" 
-               width="400" 
+          <img src="{{ section.settings.center_image | image_url }}"
+               alt="Center Product Image"
+               width="400"
                height="400">
         </div>
       {% endif %}
@@ -64,9 +64,9 @@
             <div class="icon-text-row" style="text-align: {{ section.settings.right_feature_text_alignment }};">
               {% if section.settings.right_icon_position == "left" %}
                 {% if block.settings.icon %}
-                  <img src="{{ block.settings.icon | image_url }}" 
-                       alt="{{ block.settings.item_title }}" 
-                       width="50" 
+                  <img src="{{ block.settings.icon | image_url }}"
+                       alt="{{ block.settings.item_title }}"
+                       width="50"
                        height="50">
                 {% endif %}
               {% endif %}
@@ -80,9 +80,9 @@
               </div>
               {% if section.settings.right_icon_position == "right" %}
                 {% if block.settings.icon %}
-                  <img src="{{ block.settings.icon | image_url }}" 
-                       alt="{{ block.settings.item_title }}" 
-                       width="50" 
+                  <img src="{{ block.settings.icon | image_url }}"
+                       alt="{{ block.settings.item_title }}"
+                       width="50"
                        height="50">
                 {% endif %}
               {% endif %}
@@ -94,6 +94,7 @@
     </div>
   </div>
 </div>
+{%- render 'component_dividers' -%}
 
 <style>
 .feature-banner-section {
@@ -141,7 +142,7 @@
   flex-direction: column;
 }
 
-  
+
 @media screen and (max-width: 768px) {
   .blocks-and-image {
     display: block;
@@ -315,6 +316,36 @@
         { "value": "right", "label": "Right of Text" }
       ],
       "default": "right"
+    },
+     {
+      "type": "header",
+      "content": "Divider Settings"
+    },
+    {
+      "type": "select",
+      "id": "divider",
+      "label": "Divider",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "1",
+          "label": "Divider 1"
+        },
+        {
+          "value": "2",
+          "label": "Divider 2"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider Color",
+      "default": "#ffffff"
     }
   ],
   "blocks": [

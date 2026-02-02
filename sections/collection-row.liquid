@@ -102,6 +102,8 @@
   {% endfor %}
 </div>
 
+{%- render 'component_dividers' -%}
+
 {% schema %}
 {
   "name": "Collection Row",
@@ -173,6 +175,36 @@
       "unit": "px",
       "label": "Card height",
       "default": 400
+    },
+    {
+      "type": "header",
+      "content": "Divider Settings"
+    },
+    {
+      "type": "select",
+      "id": "divider",
+      "label": "Divider",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "1",
+          "label": "Divider 1"
+        },
+        {
+          "value": "2",
+          "label": "Divider 2"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider Color",
+      "default": "#ffffff"
     }
   ],
   "blocks": [

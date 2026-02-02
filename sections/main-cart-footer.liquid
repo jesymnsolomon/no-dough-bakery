@@ -42,6 +42,10 @@
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
+            {%- when 'map' -%}
+              {% comment %}
+              <h1>MAP</h1>
+              {%  render 'cart_delivery_map' %} {% endcomment %}
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div>
@@ -173,6 +177,11 @@
     {
       "type": "buttons",
       "name": "t:sections.main-cart-footer.blocks.buttons.name",
+      "limit": 1
+    },
+    {
+      "type": "map",
+      "name": "Delivery Map",
       "limit": 1
     },
     {

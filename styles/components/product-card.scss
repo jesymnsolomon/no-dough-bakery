@@ -3,45 +3,80 @@
 
   .card {
     background-color: rgb(255, 255, 255);
-    padding: 20px;
+    padding: 17px;
     border-radius: 20px;
     max-height: 500px;
-    aspect-ratio: 314/450;
-    box-shadow: 6px 6px 20px 0px rgba(28, 28, 28, 0.103);
+    aspect-ratio: 314/430;
+    box-shadow: 6px 6px 15px 0px rgba(28, 28, 28, 0.103);
     transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 6px 6px 15px rgba(33, 33, 33, 0.205);
+      transition: 0.3s;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    @include breakpoint(medium down) {
+      aspect-ratio: 314/500;
+      padding: 10px;
+    }
 
     &__inner {
       border-radius: 20px;
       overflow: hidden;
-      min-height: 75%;
+      max-height: 75%;
+
+      @include breakpoint(medium down) {
+        max-height: 65%;
+      }
+    }
+
+    &__content {
+      padding-left: 3px;
     }
 
     &__heading {
-        h3, a {
-            color: rgb(11, 11, 11);
-            font-size: rem-calc(35px);
-            font-family: var(--font-heading-family);
-            letter-spacing: 1px;
-            font-weight: 600;
+      h3,
+      a {
+        color: rgb(11, 11, 11);
+        font-size: rem-calc(34px);
+        font-family: var(--font-body-family);
+        // text-transform: uppercase;
+        letter-spacing: 0.2px;
+        line-height: rem-calc(39px);
+        font-weight: 600;
 
-            &:hover {
-                text-decoration: none;
-            }
+        @include breakpoint(medium down) {
+          font-size: rem-calc(23px);
+          line-height: rem-calc(27px);
         }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
 
     &__description {
-        line-height: normal;
-        font-size: 16px;
+      line-height: normal;
+      font-size: 16px;
     }
 
-    &:hover {
-        transform: scale(1.01);
-        transition: 0.2s;
+    &__information {
+      .price {
+        color: #515151;
+      }
+      @include breakpoint(medium down) {
+        padding: 8px 0;
 
-        a {
-            text-decoration: none;
+        .price span {
+          font-size: rem-calc(20px);
         }
+      }
     }
   }
 }
