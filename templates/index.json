@@ -272,13 +272,7 @@
         "block_D6zVEe",
         "block_hJPgRi"
       ],
-      "custom_css": [
-        ".feature-banner-section {margin-left: -50px !important; margin-right: -50px !important; width: calc(100% + 100px) !important; margin-top: -50px !important;}",
-        ".feature-banner-section .content-container > p {text-transform: uppercase; font-weight: 600; margin-top: -20px;}",
-        ".feature-blocks h3 {font-family: \"Poppins\" !important; margin-bottom: 0;}",
-        ".center-image {min-width: 350px;}",
-        "@media (min-width: 768px) {.right-blocks, .left-blocks {max-width: 30%; }}"
-      ],
+      "custom_css": [],
       "settings": {
         "title": "Bye Bye Cheat Days",
         "subtitle": "Made with real whole food ingredients that your body will love",
@@ -422,7 +416,7 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 8,
         "padding_bottom": 80,
@@ -452,12 +446,12 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "1",
+        "enable_quick_add": true,
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 8,
-        "padding_bottom": 0,
-        "divider": "none",
+        "padding_bottom": 52,
+        "divider": "1",
         "divider_color": "#ffffff"
       }
     },
