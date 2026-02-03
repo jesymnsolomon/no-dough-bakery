@@ -1,3 +1,13 @@
+@import './tools/util/util';
+@import './tools/mixins';
+
+html {
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 section {
   position: relative;
 }
@@ -13,9 +23,22 @@ body {
 
 .section-divider {
   position: absolute;
-  z-index: 999;
+  z-index: 1;
   bottom: -25px;
   width: 100%;
+
+  @include breakpoint(medium down) {
+    bottom: -5px;
+
+    &.divider__2 {
+      transform: scale(1.8);
+    }
+    &.divider__1 {
+      transform: scale(1.1);
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   svg,
   img {

@@ -4,4 +4,11 @@
             font-weight: 500;
         }
     }
+
+    &__icons {
+        svg, path, svg use {
+
+            stroke-width: 10px;
+        }
+    }
 }

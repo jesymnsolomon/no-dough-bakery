@@ -47,3 +47,9 @@
     }
   }
 }
+
+section.collection-row-section {
+ @include breakpoint(medium down) {
+    padding-bottom: 30px;
+  }
+}

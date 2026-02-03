@@ -1,0 +1,5 @@
+@include breakpoint(large up) {
+    .footer-block:nth-of-type(2) {
+        margin-left: 10vw;
+    }
+}

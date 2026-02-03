@@ -37,6 +37,36 @@
 
     &__content {
       padding-left: 3px;
+
+      .quick-add button,
+      .quick-add div.button {
+        color: white;
+        width: 100%;
+        min-width: 0;
+        border-radius: rem-calc(20px);
+
+        &:hover {
+          border: 0;
+          border-width: 0;
+          outline: 0;
+        }
+      }
+
+      .quick-add button {
+        background-color: #ffb000;
+
+        &:hover {
+          background-color: #ffc548;
+        }
+      }
+
+      .quick-add div.button {
+        background-color: #db6751;
+
+        &:hover {
+          background-color: #fb5d3d;
+        }
+      }
     }
 
     &__heading {

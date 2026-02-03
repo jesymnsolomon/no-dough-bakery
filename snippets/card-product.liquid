@@ -303,6 +303,10 @@
               </product-form>
             {%- endif -%}
           </div>
+        {% else %}
+          <div class="quick-add no-js-hidden">
+            <div class="button">View</div>
+          </div>
         {%- endif -%}
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}

@@ -1,7 +1,7 @@
 {% assign color = section.settings.divider_color %}
 {% assign divider = section.settings.divider %}
 {% unless divider == "none" %}
-  <div class="section-divider section-divider__top divider__{{ top_divider }}" id="section-divider-top--{{ section.id }}" style="--divider-color: {{ color }}">
+  <div class="section-divider section-divider__top divider__{{ divider }}" id="section-divider-top--{{ section.id }}" style="--divider-color: {{ color }}">
     {% case divider %}
       {% when "1" %}
         {% render 'divider_1', color: color %}
