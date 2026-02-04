@@ -1,0 +1,5 @@
+div.collection {
+    @include breakpoint(xxlarge up) {
+        padding-bottom: rem-calc(250px);
+    }
+}

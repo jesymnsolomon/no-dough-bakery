@@ -1,0 +1,19 @@
+.banner {
+  @include breakpoint(xxlarge up) {
+    &__content {
+      .banner__heading {
+        font-size: rem-calc(150px);
+      }
+
+      .banner__text {
+        &--primary p {
+          font-size: rem-calc(70px);
+        }
+
+        &--secondary p {
+          font-size: rem-calc(50px);
+        }
+      }
+    }
+  }
+}

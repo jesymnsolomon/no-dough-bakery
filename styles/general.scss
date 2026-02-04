@@ -1,5 +1,5 @@
-@import './tools/util/util';
-@import './tools/mixins';
+@import "./tools/util/util";
+@import "./tools/mixins";
 
 html {
   margin: 0;
@@ -27,6 +27,30 @@ body {
   bottom: -25px;
   width: 100%;
 
+  &.divider__1 {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(xxlarge up) {
+      transform: scale(1.5);
+      bottom: 0;
+
+      svg:nth-of-type(2) {
+        transform: translate(-25px);
+      }
+    }
+
+    @include breakpoint(xlarge down) {
+      svg:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+
+  @include breakpoint(xxlarge up) {
+    bottom: -60px;
+  }
+
   @include breakpoint(medium down) {
     bottom: -5px;
 
@@ -34,13 +58,13 @@ body {
       transform: scale(1.8);
     }
     &.divider__1 {
-      transform: scale(1.1);
-      display: flex;
       justify-content: center;
+      transform: scale(1.1);
     }
   }
 
   svg,
+  path,
   img {
     width: 100%;
   }

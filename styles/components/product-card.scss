@@ -20,6 +20,11 @@
       }
     }
 
+    @include breakpoint(xxlarge up) {
+      max-height: unset;
+      aspect-ratio: 314/400;
+    }
+
     @include breakpoint(medium down) {
       aspect-ratio: 314/500;
       padding: 10px;
@@ -32,6 +37,10 @@
 
       @include breakpoint(medium down) {
         max-height: 65%;
+      }
+
+      @include breakpoint(xxlarge up) {
+        max-height: 80%;
       }
     }
 
