@@ -17,6 +17,36 @@
         "padding_bottom": 36
       }
     },
+    "17702311126113af7e": {
+      "type": "apps",
+      "blocks": {
+        "dingdoong_delivery_date_app_block_ChN3LK": {
+          "type": "shopify://apps/dingdoong-delivery-date/blocks/app-block/65ab0a55-83b7-43d0-839b-31ed27b3a16d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "dingdoong_delivery_date_app_block_ChN3LK"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1770231100c6808d45": {
+      "type": "apps",
+      "blocks": {
+        "dingdoong_delivery_date_app_block_Hz6nQb": {
+          "type": "shopify://apps/dingdoong-delivery-date/blocks/app-block/65ab0a55-83b7-43d0-839b-31ed27b3a16d",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "dingdoong_delivery_date_app_block_Hz6nQb"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "cart-footer": {
       "type": "main-cart-footer",
       "blocks": {
@@ -47,6 +77,8 @@
   },
   "order": [
     "cart-items",
+    "17702311126113af7e",
+    "1770231100c6808d45",
     "cart-footer"
   ]
 }
