@@ -272,7 +272,10 @@
         "block_D6zVEe",
         "block_hJPgRi"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "@media (min-width: 1440px) {.feature-banner-section {padding-top: 20px; } .blocks-and-image {margin-top: 80px; }}",
+        "@media (min-width: 1920px) {.feature-banner-section {padding-bottom: 100px; }}"
+      ],
       "settings": {
         "title": "Bye Bye Cheat Days",
         "subtitle": "Made with real whole food ingredients that your body will love",
@@ -312,7 +315,7 @@
         "heading_CL8YdW"
       ],
       "custom_css": [
-        ".rich-text {margin-top: -80px;}"
+        "@media (min-width: 1440px) {.rich-text {}}"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -380,7 +383,9 @@
         "card_WwzAJY",
         "card_LVRLUh"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "section {background: #f3d9d1;}"
+      ],
       "settings": {
         "background_color": "#f3d9d1",
         "padding_top": 0,
@@ -395,7 +400,9 @@
     },
     "featured_collection_3tGcNH": {
       "type": "featured-collection",
-      "custom_css": [],
+      "custom_css": [
+        "@media (min-width: 1920px) {.collection {padding-top: 50px; }}"
+      ],
       "settings": {
         "title": "Eat Cake. Be Happy.",
         "heading_size": "h0",
@@ -426,7 +433,9 @@
     },
     "featured_collection": {
       "type": "featured-collection",
-      "custom_css": [],
+      "custom_css": [
+        "@media (min-width: 1920px) {.collection {padding-top: 50px; }}"
+      ],
       "settings": {
         "title": "Spread the Love",
         "heading_size": "h0",
